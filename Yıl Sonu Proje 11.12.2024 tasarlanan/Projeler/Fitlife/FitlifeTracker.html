@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitlife Mobil App</title>
+    <link rel="stylesheet" href="tasarım.css">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+/* Genel stil ayarları */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Intro section stili */
+.intro-section {
+    background: linear-gradient(to right, #4a90e2, #50e3c2);
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Arka plan efekti */
+.intro-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Konteyner stili */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2; /* İçeriği ön plana çıkar */
+}
+
+/* Başlık stili */
+.intro-section h1 {
+    font-size: 3.5em;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Başlık hover efekti */
+.intro-section h1:hover {
+    transform: scale(1.05);
+    color: #ffcc00; /* Hover'da renk değişimi */
+}
+
+/* Paragraf stili */
+.intro-section p {
+    font-size: 1.2em;
+    color: #fff;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+/* Paragraf hover efekti */
+.intro-section p:hover {
+    opacity: 1;
+}
+
+/* Kart konteyneri */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Kartlar arasındaki boşluk */
+    margin-top: 40px;
+}
+
+/* Kart stili */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px; /* Kart genişliği */
+    transition: transform 0.3s ease;
+}
+
+/* Kart hover efekti */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Kart resmi stili */
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+/* Kart başlık stili */
+.card h3 {
+    font-size: 1.5em;
+    margin: 15px;
+}
+
+/* Kart paragraf stili */
+.card p {
+    margin: 0 15px 15px;
+    color: #666;
+}
+
+/* Buton stili */
+.intro-section .cta-button {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #fff;
+    color: #4a90e2;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Buton hover efekti */
+.intro-section .cta-button:hover {
+    background-color: #4a90e2;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+    .intro-section h1 {
+        font-size: 2.5em;
+    }
+
+    .intro-section p {
+        font-size: 1em;
+    }
+
+    .intro-section .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .card-container {
+        flex-direction: column; /* Mobilde kartları dikey hizala */
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Mobilde kart genişliğini azalt */
+    }
+}
+/* Kart konteyneri */
+.card-container {
+    display: flex;
+    justify-content: center; /* Kartları yatayda ortala */
+    gap: 30px; /* Kartlar arasındaki boşluk */
+    margin-top: 40px; /* Üstten boşluk */
+}
+
+/* Kart stili */
+.card {
+    background-color: #ffffff; /* Kart arka plan rengi */
+    border-radius: 15px; /* Yuvarlatılmış köşeler */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Derinlik efekti */
+    overflow: hidden; /* Taşmayı önle */
+    width: 300px; /* Kart genişliği */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Geçiş efektleri */
+    position: relative; /* Konumlandırma için */
+}
+
+/* Kart hover efekti */
+.card:hover {
+    transform: translateY(-10px); /* Yukarı kaydırma efekti */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); /* Hover'da gölge artışı */
+}
+
+/* Kart resmi stili */
+.card img {
+    width: 100%; /* Resim genişliği */
+    height: auto; /* Yükseklik otomatik */
+}
+
+/* Kart içeriği stili */
+.card-content {
+    padding: 20px; /* İç boşluk */
+    text-align: center; /* Ortala */
+}
+
+/* Kart başlık stili */
+.card-content h3 {
+    font-size: 1.6em; /* Başlık boyutu */
+    margin: 10px 0; /* Dış boşluk */
+    color: #333; /* Başlık rengi */
+}
+
+/* Kart açıklama stili */
+.card-content p {
+    margin: 0; /* Dış boşluk */
+    color: #666; /* Açıklama rengi */
+    font-size: 0.9em; /* Yazı boyutu */
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+    .card {
+        width: 90%; /* Mobilde kart genişliğini azalt */
+    }
+}
+
+
+
+
+
+
+.team-section {
+    text-align: center; /* Metni ortala */
+    padding: 50px 20px; /* Üst ve alt boşluk */
+    background-color: #f9f9f9; /* Arka plan rengi */
+}
+
+.team-section h2 {
+    font-size: 2.5em; /* Başlık boyutu */
+    margin-bottom: 30px; /* Alt boşluk */
+}
+
+.team-members {
+    display: flex; /* Flexbox kullan */
+    justify-content: center; /* Ortada hizala */
+    flex-wrap: wrap; /* Taşma durumunda satır oluştur */
+}
+
+.member {
+    margin: 15px; /* Üye kartları arasında boşluk */
+    padding: 20px; /* İç boşluk */
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+    background-color: #ffffff; /* Üye kartı arka plan rengi */
+    width: 200px; /* Üye kartı genişliği */
+}
+
+.member-image {
+    border-radius: 50%; /* Daire şeklinde resim */
+    width: 150px; /* Resim genişliği */
+    height: 150px; /* Resim yüksekliği */
+    object-fit: cover; /* Resmi kapsama */
+    margin-bottom: 15px; /* Alt boşluk */
+}
+
+.member h3 {
+    font-size: 1.5em; /* İsim boyutu */
+    margin: 10px 0; /* Üst ve alt boşluk */
+}
+
+.member p {
+    color: #666; /* Pozisyon yazı rengi */
+    font-size: 1em; /* Pozisyon yazı boyutu */
+}
+
+.member {
+    background-color: #ffffff; /* Arka plan rengi */
+    border-radius: 15px; /* Yuvarlatılmış köşeler */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Daha belirgin gölge efekti */
+    margin: 20px; /* Kartlar arasında boşluk */
+    padding: 20px; /* İç boşluk */
+    text-align: center; /* Metni ortala */
+    transition: transform 0.3s, box-shadow 0.3s; /* Geçiş efektleri */
+}
+
+.member:hover {
+    transform: translateY(-5px); /* Hover efektiyle yukarı kaydırma */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Hover durumunda daha belirgin gölge */
+}
+
+.member-image {
+    border-radius: 50%; /* Daire şeklinde resim */
+    width: 120px; /* Resim genişliği */
+    height: 120px; /* Resim yüksekliği */
+    object-fit: cover; /* Resmi kapsama */
+    margin-bottom: 15px; /* Alt boşluk */
+    border: 3px solid #007BFF; /* Kenarlık rengi */
+    transition: border-color 0.3s; /* Kenarlık rengi geçişi */
+}
+
+.member-image:hover {
+    border-color: #0056b3; /* Hover durumunda kenarlık rengi değişimi */
+}
+
+.member h3 {
+    font-size: 1.6em; /* İsim boyutu */
+    margin: 10px 0; /* Üst ve alt boşluk */
+    color: #333; /* İsim yazı rengi */
+}
+
+.member p {
+    color: #666; /* Pozisyon yazı rengi */
+    font-size: 1em; /* Pozisyon yazı boyutu */
+    margin: 5px 0; /* Üst ve alt boşluk */
+}
+
+
+</style>
+</head>
+<body>
+
+</div>
+<nav class="navbar">
+  <div id="companyLogo">
+    <img src="Resim/Logo maker project-1.png" alt="">
+</div>
+  
+<ul>
+    <li><a href="../../Anasayfa/Anasayfa.html">Anasayfa</a></li>
+<li><a href="#" id="hizmetler-link">Hizmetler<span
+           class="material-symbols-outlined arrow"></span></a>
+
+   <ul id="hizmetmenu">
+     
+       <li><a href="../../Hizmetler/WebTasarım.html">Modern Web Tasarımları</a></li>
+               <li><a href="../../Hizmetler/Seo Çalışmaları/seo.html">SEO Çalışmaları</a></li>
+               <li><a href="../../Hizmetler/Bulut İşlemleri/bulut.html">Bulut Bilişim Hizmetleri</a></li>
+               <li><a href="../../Hizmetler/Site Güvenliği/SiteGüven.html">Site Güvenliği</a></li>
+               <li><a href="../../Hizmetler/Mobil Uygulama Geliş/mobil.html">Mobil Uygulama Geliştirme</a></li>
+       <li><a href="" id="eticaret">Yapay Zeka ve Makine Öğrenimi<span id="msoe"
+                   class="material-symbols-outlined ticspan"></span></a>
+
+           <ul id="eticaretMenu">
+               <li><a href="../../Hizmetler/Yapay Zeka/Görüntü İşleme/Görüntü.html">Görüntü İşleme ve Nesne Tanıma</a></li>
+           </ul>
+
+       </li>
+
+       <li><a href="../../Hizmetler/Hosting/hosting.html">Hosting</a></li>
+
+
+   </ul>
+
+</li>
+        <li><a id="projelerLink" href="">Projeler<span
+            class="material-symbols-outlined arrow"></span></a>
+  
+            <ul class="links">
+              <li><a href="../../Projeler/WebMinds/Webminds.html">Web Projesi:WebMinds</a></li>
+              <li><a href="../../Projeler/InnoCity/ınno.html">Akıllı Şehir Yönetimi Platformu:InnoCity</a></li>
+              <li><a href="../../Projeler/Fitlife/FitlifeTracker.html">Mobil Uygulama: FitLife Tracker</a></li>
+              <li><a href="../../Projeler/Securenet/securenet.html">Siber Güvenlik Projesi: GuardSphere</a></li>
+          </ul>
+  
+  </li>
+  <li><a href="../../Hakkında Ve İletişim/Hakkında.html">Hakkımızda</a></li>
+  <li><a href="../../Hakkında Ve İletişim/İletişim.html">İletişim</a></li>
+  <li><a href="https://www.instagram.com/#"><img src="./Resim/pngwing.com (6).png" width="30" height="30"></a></li>
+  <li><a href="https://www.youtube.com/"><img src="Resim/pngwing.com (7).png" width="40" height="30"></a></li>
+  <li><a href="https://www.facebook.com/?stype=lo&flo=1&deoia=1&jlou=AfcJ8d2LeEVns0XnDRW16w8cTnoVH0NJQFo-9dXuMV_4MAQbqu1esLjur6Mra3yHGASgRuIu0ssMan28eChEjFqybMx767uBXcmsG9ViqUKj8g&smuh=32622&lh=Ac-x5OgEJ0FQFU49y5I"><img src="Resim/pngwing.com (8).png" width="30" height="30"></a></li>
+  
+
+    </ul>
+</nav>
+
+
+
+<section class="intro-section">
+  <div class="container">
+      <h1>FitLife Mobil App</h1>
+      <p>Fitlife mobil uygulaması, sağlıklı yaşam hedeflerinizi destekleyen bir platformdur. Kişiselleştirilmiş antrenman ve beslenme planları sunarak ilerlemenizi takip etmenizi sağlar. Kullanıcı dostu arayüzü ve motive edici içerikleriyle sağlıklı yaşam yolculuğunuzu eğlenceli hale getirir. Fitlife, sağlıklı yaşam tarzını benimsemek isteyenler için ideal bir yardımcıdır.</p>
+      
+      <div class="card-container">
+          <div class="card">
+              <img src="Resim/1.png" alt="Proje 1">
+          </div>
+          <div class="card">
+              <img src="Resim/2.jpg" alt="Proje 2">
+          </div>
+          <div class="card">
+              <img src="Resim/3.png" alt="Proje 3">
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<div class="content-container">
+  <div class="content-left">
+      <h1 class="">Fitlife: Sağlıklı Yaşam Yolculuğunuzda Yanınızda Olan Koç
+      </h1>
+      <p class="">Fitlife uygulaması, sağlıklı yaşam hedeflerine ulaşmak isteyenler için vazgeçilmez bir araçtır. Kullanıcılar, kişiselleştirilmiş antrenman ve beslenme planları oluşturabilirken, ilerlemelerini de kolayca takip edebilir. Şirketimiz, kullanıcı geri bildirimlerine dayalı sürekli güncellemeler yaparak, uygulamayı daha etkili ve kullanıcı dostu hale getirir. Diğer firmalardan farklı olarak, etkileşimli içeriklerimiz ve motive edici özelliklerimizle kullanıcıların hedeflerine ulaşmalarını destekliyoruz. Ayrıca, topluluk desteği sayesinde kullanıcılar arasında etkileşimi artırarak, sağlıklı yaşam yolculuklarını daha eğlenceli ve sürdürülebilir kılıyoruz. Fitlife, yalnızca bir uygulama değil, aynı zamanda sağlıklı yaşam tarzını benimsemek isteyenler için bir yaşam koçudur. Bu nedenle, Fitlife, sağlıklı yaşam alanında en iyi deneyimi sunmayı hedeflemektedir.</p>
+  </div>
+  <div class="content-right">
+      <img src="Resim/xz.jpg" alt="Örnek Resim">
+  </div>
+  
+</div>
+<div class="parallax"></div>
+
+<div class="content-container">
+ 
+  <div class="content-right">
+      <img src="Resim/app.png" alt="Örnek Resim">
+  </div>
+  <div class="content-left">
+      <h1 class="">Fitlife: Sağlıklı Yaşam İçin Kapsamlı Bir Mobil Uygulama
+      </h1>
+      <p class="">Fitlife mobil uygulaması, kullanıcıların sağlıklı yaşam hedeflerine ulaşmalarını destekleyen kapsamlı bir platformdur. Modern ve kullanıcı dostu arayüzü sayesinde, kullanıcılar antrenman programlarına, beslenme planlarına ve motivasyonel içeriklere kolayca erişebilir. Uygulama, kişisel hedeflere göre özelleştirilmiş egzersiz ve diyet önerileri sunar. Ayrıca, kullanıcılar ilerlemelerini takip edebilir ve toplulukla etkileşimde bulunabilir. Fitlife, sağlıklı yaşam tarzını benimsemek isteyenler için ideal bir yardımcıdır. Sürekli güncellenen içerikleri ve kullanıcı geri bildirimlerine dayalı geliştirmeleri ile en iyi deneyimi sunmayı hedeflemektedir. Kullanıcılar, uygulama içinde sağladıkları geri bildirimlerle platformun gelişimine katkıda bulunabilirler. Bu sayede Fitlife, kullanıcıların ihtiyaçlarına daha iyi yanıt vererek, sağlık ve fitness alanında daha etkili bir deneyim sunmayı amaçlamaktadır. Uygulama, kullanıcıların motivasyonunu artırmak için çeşitli ödüller ve başarı rozetleri de sunarak, sağlıklı yaşam yolculuklarını daha eğlenceli hale getirir.</p>
+  </div>
+</div> 
+
+<div class="parallax"></div>
+<div class="team-section">
+  <h2>Proje Ekibi</h2>
+  <div class="team-members">
+      <div class="member">
+          <img src="Resim/insan.jpg" alt="Jason Doe" class="member-image">
+          <h3>Jason Doe</h3>
+          <p>User experiences</p>
+      </div>
+      <div class="member">
+          <img src="Resim/man.jpg" alt="Timothy Clark" class="member-image">
+          <h3>Timothy Clark</h3>
+          <p>Web developer</p>
+      </div>
+      <div class="member">
+          <img src="Resim/qw.jpg" alt="Vicky Tan" class="member-image">
+          <h3>Vicky Tan</h3>
+          <p>Web designer</p>
+      </div>
+      <div class="member">
+          <img src="Resim/xc.jpg" alt="Kevin Peterson" class="member-image">
+          <h3>Kevin Peterson</h3>
+          <p>UI/UX Tasarımcısı</p>
+      </div>
+      <div class="member">
+        <img src="Resim/zxx.jpg" alt="Kevin Peterson" class="member-image">
+        <h3>Charlie Cook</h3>
+        <p>Test Mühendisi</p>
+    </div>
+    <div class="member">
+      <img src="Resim/zas.jpg" alt="Kevin Peterson" class="member-image">
+      <h3>Mary Helson</h3>
+      <p>Veri Bilimcisi</p>
+  </div>
+  </div>
+</div>
+
+
+<footer>
+    <div class="container,aw" >
+      <div class="wrapper">
+        <div class="footer-widget">
+          <a href="#">
+            <img src="../Logo maker project-1.png" class="logo"  width="200" height="auto"/>
+          </a>
+          <p class="desc">
+           "Şirketimizi sosyal medya hesaplarımızdan takip edebilirsiniz"
+          </p>
+          <ul class="socials">
+            <li>
+              <a href="#">
+                <img src="Resim/pngwing.com (14).png" width="33" height="auto">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="Resim/pngwing.com (7).png" width="33" height="auto">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="Resim/pngwing.com (8).png" width="33" height="auto">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="Resim/pngwing.com (13).png " width="33" height="auto" > 
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-widget">
+          <h6>Projeler</h6>
+          <ul class="links">
+            <ul class="links">
+              <li><a href="../WebMinds/Webminds.html">Web Projesi:WebMinds</a></li>
+              <li><a href="../InnoCity/ınno.html   ">Akıllı Şehir Yönetimi Platformu:InnoCity</a></li>
+              <li><a href="../Fitlife/FitlifeTracker.html">Mobil Uygulama: FitLife Tracker</a></li>
+              <li><a href="../DataFusion/data.html">Yapay Zeka ve Büyük Veri Projesi:DataFusion</a></li>
+              <li><a href="../Securenet/securenet.html">Siber Güvenlik Projesi: SecureNet</a></li>
+          </ul>
+        </div>
+        <div class="footer-widget">
+          <h6>Hizmetler</h6>
+          <ul class="links">
+            <li><a href="../../Hizmetler/WebTasarım.html">Web Tasarımları</a></li>
+            <li><a href="../../Hizmetler/Bulut İşlemleri/bulut.html">Bulut Bilişim Hizmetleri</a></li>
+            <li><a href="../../Hizmetler/Hosting/hosting.html">Hosting</a></li>
+            <li><a href="../../Hizmetler/Site Güvenliği/SiteGüven.html">Site Güvenliği
+            <li><a href="../../Hizmetler/Yapay Zeka/Görüntü İşleme/Görüntü.html">Görüntü-İşleme</a></li>
+            <li><a href="../../Hizmetler/Mobil Uygulama Geliş/mobil.html">Mobil Uygulama</a></li>
+            </a></li>
+          </ul>
+        </div>
+        <div class="footer-widget">
+          <h6>Hakkımızda</h6>
+          <ul class="links">
+            <li><a href="../../Hakkında Ve İletişim/İletişim.html">İletişim</a></li>
+            <li><a href="../../Hakkında Ve İletişim/Hakkında.html">Hakkında</a></li>
+
+           
+          </ul>
+        </div>
+      </div>
+      <div class="copyright-wrapper">
+        <p>
+          Design  Developed by
+          <a href="#" target="blank">Mehmet Kıvrak</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

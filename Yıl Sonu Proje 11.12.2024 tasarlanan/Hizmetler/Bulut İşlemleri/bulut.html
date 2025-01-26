@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulut İşlem Hizmetleri</title>
+    <link rel="stylesheet" href="bulut.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+.parallax {
+    /* Arka plan resmi */
+    background-image: url('../wallper.jpg'); /* Kendi arka plan resminizi buraya ekleyin */
+    height: 500px; /* Yükseklik ayarı */
+    background-attachment: fixed; /* Arka planın sabit kalmasını sağlar */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.content {
+    height: 400px; /* İçerik bölümü yüksekliği */
+    background-color: rgb(179, 82, 82); /* İçerik arka plan rengi */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+p {
+    margin: 10px 0 0;
+}
+.content {
+    display: flex; /* Flexbox kullanarak yan yana yerleştirir */
+    justify-content: space-between; /* İçerikler arasında boşluk bırakır */
+    align-items: center; /* Dikey olarak ortalar */
+}
+.content-container {
+    display: flex;
+    align-items: center ; /* Dikey ortalama */
+    justify-content: center; /* Yatay ortalama */
+    padding: 50px;
+    max-width: 2900px;
+    margin: 0 auto;
+    padding: 90px 0; /* Üst ve alt kısımlarda 20px boşluk */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.content-right {
+    display: flex; /* Flexbox ile hizalama */
+    justify-content: flex-end; /* Yatayda sağa yaslama */
+    align-items: flex-end; /* Dikeyde ortalama */
+    padding: 0px; /* İçerik etrafında boşluk */
+    background-color: #ffffff; /* Arka plan rengi */
+    border-radius: 10px; /* Kenar yuvarlama */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölgelendirme efekti */
+    margin-left: 270px; /* Soldan boşluk */
+    max-width: 700px; /* Maksimum genişlik */
+    width: calc(100% - 40px); /* Genişlik ayarı, toplam genişlikten padding'leri çıkararak */
+}
+.content-left {
+    padding: 20px; /* İçerik etrafında boşluk */
+    background-color: rgba(176, 52, 52, 0.496); /* Hafif şeffaf arka plan */
+    border-radius: 8px; /* Kenar yuvarlama */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.679); /* Hafif gölgelendirme */
+    max-width: 900px; /* Maksimum genişlik */
+    margin: 20px; /* Üst, alt, sol ve sağ boşluk */
+    flex: 3; /* Esneme özelliği */
+    margin-bottom: 159px;
+    margin-top: 170px;
+    margin-right: 40px;
+    height: auto; /* Yükseklik otomatik ayarlanacak */
+    max-width: 40%; /* Resmin maksimum genişliği %100 */
+  
+
+}
+
+
+.content-right img {
+    max-width: 140%; /* Resmin maksimum genişliği %100 */
+    height: auto; /* Yükseklik otomatik ayarlanacak */
+    border-radius: 10px; /* Resmin kenar yuvarlama */
+}
+
+.zx h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.zx h1:hover {
+    color: #007BFF; /* Başlık üzerine gelindiğinde renk değişimi */
+}
+
+.zx p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+}
+.content-left img {
+    max-width: 100%; /* Resmin genişliğini %100 yaparak duyarlı hale getirme */
+    height: auto; /* Yüksekliği otomatik ayarlama */
+}
+
+
+
+/* Services Section */
+.services-section {
+  padding: 80px 0;
+}
+.services-section h2 {
+  text-align: center;   
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+}
+.service-box {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+.service-box:hover {
+  transform: translateY(-10px);
+}
+.service-box img {
+  max-width: 80px;
+  height: auto;
+  margin-bottom: 20px;
+}
+.i1 {
+  border-top: 5px solid #e34c26; /* HTML */
+}
+.i2 {
+  border-top: 5px solid #264de4; /* CSS */
+}
+.i3 {
+  border-top: 5px solid #f7df1e; /* JavaScript */
+}
+.i4 {
+  border-top: 5px solid #68a063; /* Node.js */
+}
+.i5 {
+  border-top: 5px solid #61dafb; /* React */
+}
+
+
+
+</style>
+</head>
+<body>
+
+</div>
+<nav class="navbar">
+  <div id="companyLogo">
+    <img src="Resim/Logo maker project-1.png" alt="">
+</div>
+  
+<ul>
+  <li><a href="../../Anasayfa/Anasayfa.html">Anasayfa</a></li>
+    <li><a href="#" id="hizmetler-link">Hizmetler<span
+                class="material-symbols-outlined arrow"></span></a>
+
+        <ul id="hizmetmenu">
+            <li><a href="../WebTasarım.html">Modern Web Tasarımları</a></li>
+            <li><a href="../Seo Çalışmaları/seo.html">SEO Çalışmaları</a></li>
+            <li><a href="../Site Güvenliği/SiteGüven.html">Site Güvenliği</a></li>
+            <li><a href="../Mobil Uygulama Geliş/mobil.html">Mobil Uygulama Geliştirme</a></li>
+            <li><a href="" id="eticaret">Yapay Zeka ve Makine Öğrenimi<span id="msoe"
+                        class="material-symbols-outlined ticspan"></span></a>
+
+                <ul id="eticaretMenu">
+                    <li><a href="../Yapay Zeka/Görüntü İşleme/Görüntü.html">Görüntü İşleme ve Nesne Tanıma</a></li>
+                </ul>
+
+            </li>
+
+            <li><a href="../Hosting/hosting.html">Hosting</a></li>
+
+
+        </ul>
+
+        </li>
+
+        <li><a id="projelerLink" href="">Projeler<span
+                    class="material-symbols-outlined arrow"></span></a>
+
+                    <ul class="links">
+                      <li><a href="../../Projeler/WebMinds/Webminds.html">Web Projesi:WebMinds</a></li>
+                      <li><a href="../../Projeler/InnoCity/ınno.html">Akıllı Şehir Yönetimi Platformu:InnoCity</a></li>
+                      <li><a href="../../Projeler/Fitlife/FitlifeTracker.html">Mobil Uygulama: FitLife Tracker</a></li>
+                      <li><a href="../../Projeler/DataFusion/data.html">Yapay Zeka ve Büyük Veri Projesi:DataFusion</a></li>
+                      <li><a href="../../Projeler/Securenet/securenet.html">Siber Güvenlik Projesi: GuardSphere</a></li>
+                  </ul>
+
+        </li>
+        <li><a href="../../Hakkında Ve İletişim/Hakkında.html">Hakkımızda</a></li>
+        <li><a href="../../Hakkında Ve İletişim/İletişim.html">İletişim</a></li>
+        <li><a href="https://www.instagram.com/#"><img src="Resim/pngwing.com (6).png" width="30" height="30"></a></li>
+        <li><a href="https://www.youtube.com/"><img src="Resim/pngwing.com (7).png" width="40" height="30"></a></li>
+        <li><a href="https://www.facebook.com/?stype=lo&flo=1&deoia=1&jlou=AfcJ8d2LeEVns0XnDRW16w8cTnoVH0NJQFo-9dXuMV_4MAQbqu1esLjur6Mra3yHGASgRuIu0ssMan28eChEjFqybMx767uBXcmsG9ViqUKj8g&smuh=32622&lh=Ac-x5OgEJ0FQFU49y5I"><img src="Resim/pngwing.com (8).png" width="30" height="30"></a></li>
+
+
+    </ul>
+</nav>
+
+
+
+<section class="intro-section">
+    <div class="container">
+        <h1>Bulut İşlem Hizmetleri</h1>
+        <p>Bulut işlem hizmetleri, verilerin internet üzerinden depolanmasını sağlayan modern çözümlerdir. Esneklik ve maliyet etkinliği sunarak şirketlere hızlı erişim ve güvenlik sağlar.
+        </p>
+    </div>
+</section> 
+
+<div class="content-container">
+    <div class="content-left">
+        <h1 class="">Altyapı Hizmeti (IaaS)</h1>
+        <p class="">Altyapı Hizmeti (IaaS), bulut bilişim modelinin bir parçası olarak, kullanıcıların sanal sunucular, depolama alanları ve ağ kaynakları gibi temel bilişim altyapılarını internet üzerinden kiralamasını sağlar. Bu model, fiziksel donanım satın alma ve yönetme zorunluluğunu ortadan kaldırarak esneklik ve maliyet etkinliği sunar. IaaS'in temel özellikleri arasında ölçeklenebilirlik, esneklik ve yüksek erişilebilirlik bulunur. Örnek sağlayıcılar arasında Amazon Web Services (AWS) ile EC2, Microsoft Azure ile Azure Virtual Machines ve Google Cloud Platform ile Google Compute Engine yer alır. Bu şirketler, sanal sunucular, depolama çözümleri, ağ hizmetleri ve veri güvenliği gibi çeşitli hizmetler sunarak işletmelerin ihtiyaçlarını karşılamaktadır. IaaS, özellikle hızlı büyüyen işletmeler için maliyetleri düşürme ve esneklik sağlama açısından büyük avantajlar sunar.</p>
+    </div>
+    <div class="content-right">
+        <img src="Resim/iaas-nedir-1024x549.jpg" alt="Örnek Resim">
+    </div>
+    
+</div>
+<div class="parallax"></div>
+
+<div class="content-container">
+   
+    <div class="content-right">
+        <img src="Resim/saas.png" alt="Örnek Resim">
+    </div>
+    <div class="content-left">
+        <h1 class="">Yazılım Hizmeti (SaaS) </h1>
+        <p class="">Yazılım Hizmeti (SaaS), bulut bilişim modelinin bir parçası olarak, yazılımların internet üzerinden hizmet olarak sunulmasını sağlar. Kullanıcılar, uygulamalara web tarayıcıları aracılığıyla erişerek, yazılımı indirmeden veya kurmadan kullanabilirler. SaaS, işletmelere maliyetleri düşürme, güncellemeleri otomatik olarak alma ve ölçeklenebilirlik sağlama avantajları sunar. Örnek SaaS sağlayıcıları arasında Google Workspace, Microsoft 365 ve Salesforce bulunmaktadır. Bu şirketler, e-posta, belge yönetimi, müşteri ilişkileri yönetimi gibi çeşitli uygulamalar sunarak işletmelerin ihtiyaçlarını karşılamaktadır. SaaS, özellikle küçük ve orta ölçekli işletmeler için erişilebilirlik ve esneklik açısından önemli bir çözüm sunar.</p>
+    </div>
+</div> 
+  
+<div class="parallax"></div>
+
+<div class="content-container">
+    <div class="content-left">
+        <h1 class="">Platform Hizmeti (PaaS)</h1>
+        <p class="">Platform Hizmeti (PaaS), bulut bilişim modelinin bir parçası olarak, geliştiricilere uygulama geliştirme, test etme ve dağıtma süreçlerini kolaylaştıran bir platform sunar. PaaS, altyapı yönetimi gereksinimlerini ortadan kaldırarak, geliştiricilerin yalnızca uygulama koduna odaklanmalarını sağlar. Kullanıcılar, çeşitli programlama dilleri, araçlar ve hizmetler ile uygulama geliştirmek için gereken kaynaklara erişebilirler. Örnek PaaS sağlayıcıları arasında Google App Engine, Microsoft Azure App Service ve Heroku bulunmaktadır. Bu şirketler, uygulama geliştirme sürecini hızlandıran araçlar ve hizmetler sunarak, geliştiricilerin daha verimli çalışmasına olanak tanır. PaaS, özellikle hızlı prototipleme ve yenilikçi uygulama geliştirme için ideal bir çözüm sunar.</p>
+    </div>
+    <div class="content-right">
+        <img src="Resim/pass.jpg" alt="Örnek Resim">
+    </div>
+    
+</div>
+
+<section class="services-section">
+    <h2>Web Sitesi Geliştirirken Kullandığımız Yazılım Dilleri</h2>
+    <div class="services-grid">
+      <div class="service-box i1">
+        <img class="ir1" src="Resim/html.png" alt="HTML" width="80px" height="auto">
+      </div>
+      <div class="service-box i2">
+        <img class="ir1" src="Resim/css.png" alt="CSS" width="80px" height="auto">
+      </div>
+      <div class="service-box i3">
+        <img class="ir1" src="Resim/js.png" alt="JavaScript" width="80px" height="auto">
+      </div>
+      <div class="service-box i4">
+        <img class="ir1" src="Resim/ndjs.png" alt="Node.js" width="80px" height="auto">
+      </div>
+      <div class="service-box i5">
+        <img class="ir1" src="Resim/react.png" alt="React" width="80px" height="auto">
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container,aw" >
+      <div class="wrapper">
+        <div class="footer-widget">
+          <a href="#">
+            <img src="/Logo maker project-1.png" class="logo"  width="200" height="auto"/>
+          </a>
+          <p class="desc">
+           "Şirketimizi sosyal medya hesaplarımızdan takip edebilirsiniz"
+          </p>
+          <ul class="socials">
+            <li>
+              <a href="#">
+                <img src="Resim/pngwing.com (14).png" width="33" height="auto">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="Resim/pngwing.com (7).png" width="33" height="auto">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="Resim/pngwing.com (8).png" width="33" height="auto">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="Resim/pngwing.com (13).png " width="33" height="auto" > 
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-widget">
+          <h6>Projeler</h6>
+          <ul class="links">
+            <ul class="links">
+              <li><a href="../../Projeler/WebMinds/Webminds.html">Web Projesi:WebMinds</a></li>
+              <li><a href="../Projeler/WebMinds/Webminds.html   ">Akıllı Şehir Yönetimi Platformu:InnoCity</a></li>
+              <li><a href="../Projeler/Fitlife/FitlifeTracker.html">Mobil Uygulama: FitLife Tracker</a></li>
+              <li><a href="../Projeler/DataFusion/data.html">Yapay Zeka ve Büyük Veri Projesi:DataFusion</a></li>
+              <li><a href="../Projeler/Securenet/securenet.html">Siber Güvenlik Projesi: SecureNet</a></li>
+          </ul>
+        </div>
+        <div class="footer-widget">
+          <h6>Hizmetler</h6>
+          <ul class="links">
+            <li><a href="../WebTasarım.html">Web Tasarımları</a></li>
+            <li><a href="../Bulut İşlemleri/bulut.html">Bulut Bilişim Hizmetleri</a></li>
+            <li><a href="../Hosting/hosting.html">Hosting</a></li>
+            <li><a href="../Site Güvenliği/SiteGüven.html">Site Güvenliği
+            <li><a href="../Yapay Zeka/Görüntü İşleme/Görüntü.html">Görüntü-İşleme</a></li>
+            <li><a href="../Mobil Uygulama Geliş/mobil.html">Mobil Uygulama</a></li>
+            </a></li>
+          </ul>
+        </div>
+        <div class="footer-widget">
+          <h6>Hakkımızda</h6>
+          <ul class="links">
+            <li><a href="../../Hakkında Ve İletişim/İletişim.html">İletişim</a></li>
+            <li><a href="../../Hakkında Ve İletişim/Hakkında.html">Hakkında</a></li>
+
+           
+          </ul>
+        </div>
+      </div>
+      <div class="copyright-wrapper">
+        <p>
+          Design  Developed by
+          <a href="#" target="blank">Mehmet Kıvrak</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+    
+</body>
+</html>

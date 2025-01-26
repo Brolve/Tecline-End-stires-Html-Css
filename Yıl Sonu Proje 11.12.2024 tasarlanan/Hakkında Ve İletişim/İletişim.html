@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <link rel="icon" href="/logo.png" type="image/x-icon">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim</title>
+    <link rel="stylesheet" href="iletişim.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+.parallax {
+    /* Arka plan resmi */
+    height: 500px; /* Yükseklik ayarı */
+    background-attachment: fixed; /* Arka planın sabit kalmasını sağlar */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.content {
+    height: 400px; /* İçerik bölümü yüksekliği */
+    background-color: rgb(179, 82, 82); /* İçerik arka plan rengi */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+p {
+    margin: 10px 0 0;
+}
+
+.content {
+    display: flex; /* Flexbox kullanarak yan yana yerleştirir */
+    justify-content: space-between; /* İçerikler arasında boşluk bırakır */
+    align-items: center; /* Dikey olarak ortalar */
+}
+
+.content-container {
+    display: flex;
+    align-items: center ; /* Dikey ortalama */
+    justify-content: center; /* Yatay ortalama */
+    padding: 50px;
+    max-width: 2900px;
+    margin: 0 auto;
+    padding: 90px 0; /* Üst ve alt kısımlarda 20px boşluk */
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.content-right {
+    display: flex; /* Flexbox ile hizalama */
+    justify-content: flex-end; /* Yatayda sağa yaslama */
+    align-items: flex-end; /* Dikeyde ortalama */
+    padding: 0px; /* İçerik etrafında boşluk */
+    background-color: #ffffff; /* Arka plan rengi */
+    border-radius: 10px; /* Kenar yuvarlama */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölgelendirme efekti */
+    margin-left: 270px; /* Soldan boşluk */
+    max-width: 700px; /* Maksimum genişlik */
+    width: calc(100% - 40px); /* Genişlik ayarı, toplam genişlikten padding'leri çıkararak */
+}
+
+.content-left {
+    padding: 20px; /* İçerik etrafında boşluk */
+    background-color: rgba(176, 52, 52, 0.496); /* Hafif şeffaf arka plan */
+    border-radius: 8px; /* Kenar yuvarlama */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.679); /* Hafif gölgelendirme */
+    max-width: 900px; /* Maksimum genişlik */
+    margin: 20px; /* Üst, alt, sol ve sağ boşluk */
+    flex: 3; /* Esneme özelliği */
+    margin-bottom: 159px;
+    margin-top: 170px;
+    margin-right: 40px;
+    height: auto; /* Yükseklik otomatik ayarlanacak */
+    max-width: 40%; /* Resmin maksimum genişliği %100 */
+  
+
+}
+
+
+.content-right img {
+    max-width: 140%; /* Resmin maksimum genişliği %100 */
+    height: auto; /* Yükseklik otomatik ayarlanacak */
+    border-radius: 10px; /* Resmin kenar yuvarlama */
+}
+
+.zx h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.zx h1:hover {
+    color: #007BFF; /* Başlık üzerine gelindiğinde renk değişimi */
+}
+
+.zx p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+}
+.content-left img {
+    max-width: 100%; /* Resmin genişliğini %100 yaparak duyarlı hale getirme */
+    height: auto; /* Yüksekliği otomatik ayarlama */
+}
+
+
+
+/* Services Section */
+.services-section {
+  padding: 80px 0;
+}
+
+.services-section h2 {
+  text-align: center;   
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+}
+
+.service-box {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+}
+
+.service-box img {
+  max-width: 80px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.i1 {
+  border-top: 5px solid #e34c26; /* HTML */
+}
+
+.i2 {
+  border-top: 5px solid #264de4; /* CSS */
+}
+
+.i3 {
+  border-top: 5px solid #f7df1e; /* JavaScript */
+}
+
+.i4 {
+  border-top: 5px solid #68a063; /* Node.js */
+}
+
+.i5 {
+  border-top: 5px solid #61dafb; /* React */
+}
+
+
+.contact-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Başlık Stilleri */
+.contact-section h1, .contact-section h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Flexbox ile düzenleme */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Mobil uyum için */
+}
+
+/* Kart Stilleri */
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    flex: 1; /* Esnek genişlik */
+    min-width: 300px; /* Minimum genişlik ayarı */
+    transition: box-shadow 0.3s ease;
+}
+
+/* Form Stilleri */
+/* İletişim Formu */
+.contact-form {
+    padding: 20px;
+    background: #ffffff; /* Beyaz arka plan */
+    border: 1px solid #ddd; /* Açık gri kenar */
+    border-radius: 8px; /* Yuvarlatılmış köşeler */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    margin: 10px 0; /* Üst ve alt boşluk */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Geçiş efekti */
+}
+
+.contact-form button:hover {
+    background-color: #0056b3; /* Hover rengi */
+}
+
+/* İletişim Bilgileri */
+.card.contact-details {
+    background: #ffffff; /* Beyaz arka plan */
+    color: #333; /* Koyu gri yazı rengi */
+    border: 1px solid #ddd; /* Açık gri kenar */
+    padding: 20px; /* İç boşluk */
+    border-radius: 8px; /* Yuvarlatılmış köşeler */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Geçiş efektleri */
+    margin: 10px 0; /* Kartlar arasında boşluk */
+}
+
+.card.contact-details:hover {
+    transform: scale(1.02); /* Hover sırasında hafif büyütme */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Hover sırasında gölgeyi artırma */
+}
+
+.card.contact-details a {
+    color: #007BFF; /* Mavi bağlantı rengi */
+    text-decoration: none; /* Altı çizgiyi kaldır */
+}
+
+.card.contact-details a:hover {
+    text-decoration: underline; /* Hover sırasında altı çizili yap */
+}
+
+.card.contact-details ul {
+    list-style-type: disc; /* Noktaları dairesel yapmak için */
+    padding-left: 20px; /* Soldan boşluk ekleme */
+    margin-top: 10px; /* Üstten boşluk ekleme */
+}
+
+.card.contact-details strong {
+    color: #333; /* Kalın yazı rengi koyu gri */
+    display: inline-block; /* Kalın yazıyı blok olarak göster */
+    margin-bottom: 5px; /* Altına boşluk ekleme */
+}
+
+/* Harita Stilleri */
+.map-container {
+    text-align: center;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Kart Hover Efekti */
+.card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .contact-form, .card.contact-details, .map-container {
+        padding: 10px;
+    }
+
+    .contact-form button {
+        font-size: 14px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+</div>
+<nav class="navbar">
+  <div id="companyLogo">
+    <img src="../Logo maker project-1.png" alt="">
+</div>
+  
+<ul>
+  <li><a href="../Anasayfa/Anasayfa.html">Anasayfa</a></li>
+    <li><a href="#" id="hizmetler-link">Hizmetler<span
+                class="material-symbols-outlined arrow"></span></a>
+
+        <ul id="hizmetmenu">
+            <li><a href="../Hizmetler/WebTasarım.html">Modern Web Tasarımları</a></li>
+            <li><a href="../Hizmetler/Bulut İşlemleri/bulut.html">Bulut Bilişim Hizmetleri</a></li>
+            <li><a href="../Hizmetler/Site Güvenliği/SiteGüven.html">Site Güvenliği</a></li>
+            <li><a href="../Hizmetler/Mobil Uygulama Geliş/mobil.html">Mobil Uygulama Geliştirme</a></li>
+            <li><a href="" id="eticaret">Yapay Zeka ve Makine Öğrenimi<span id="msoe"
+                        class="material-symbols-outlined ticspan"></span></a>
+
+                <ul id="eticaretMenu">
+                    
+                    <li><a href="../Hizmetler/Yapay Zeka/Görüntü İşleme/Görüntü.html">Görüntü İşleme ve Nesne Tanıma</a></li>
+                </ul>
+
+            </li>
+
+            <li><a href="../Hizmetler/Hosting/hosting.html">Hosting</a></li>
+
+
+        </ul>
+
+        </li>
+
+        <li><a id="projelerLink" href="">Projeler<span
+                    class="material-symbols-outlined arrow"></span></a>
+
+                    <ul class="links">
+                      <li><a href="../Projeler/WebMinds/Webminds.html">Web Projesi:WebMinds</a></li>
+                      <li><a href="../Projeler/InnoCity/ınno.html">Akıllı Şehir Yönetimi Platformu:InnoCity</a></li>
+                      <li><a href="../Projeler/Fitlife/FitlifeTracker.html">Mobil Uygulama: FitLife Tracker</a></li>
+                      <li><a href="../Projeler/DataFusion/data.html">Yapay Zeka ve Büyük Veri Projesi:DataFusion</a></li>
+                      <li><a href="../Projeler/Securenet/securenet.html">Siber Güvenlik Projesi: SecureNet</a></li>
+                  </ul>
+
+        </li>
+        <li><a href="../Hakkında Ve İletişim/Hakkında.html">Hakkımızda</a></li>
+        <li><a href="../Hakkında Ve İletişim/İletişim.html">Hakkımızda</a></li>
+        <li><a href="https://www.instagram.com/#"><img src="../Hakkında Ve İletişim/Resim/pngwing.com (6).png" width="30" height="30"></a></li>
+        <li><a href="https://www.youtube.com/"><img src="../Hakkında Ve İletişim/Resim/pngwing.com (7).png" width="40" height="30"></a></li>
+        <li><a href="https://www.facebook.com/?stype=lo&flo=1&deoia=1&jlou=AfcJ8d2LeEVns0XnDRW16w8cTnoVH0NJQFo-9dXuMV_4MAQbqu1esLjur6Mra3yHGASgRuIu0ssMan28eChEjFqybMx767uBXcmsG9ViqUKj8g&smuh=32622&lh=Ac-x5OgEJ0FQFU49y5I">
+          <img src="../Hakkında Ve İletişim/Resim/pngwing.com (8).png" width="30" height="30"></a></li>
+    </ul>
+</nav>
+
+<div class="contact-section">
+    
+    <div class="contact-container">
+        <div class="card contact-form">
+            <h2>İletişim Formu</h2>
+            <form>
+                <label for="name">Adınız</label>
+                <input type="text" id="name" required>
+                <label for="email">E-posta</label>
+                <input type="email" id="email" required>
+                <label for="message">Mesajınız</label>
+                <textarea id="message" rows="4" required></textarea>
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
+        <div class="card contact-details">
+            <h2>İletişim Bilgileri</h2>
+            <p><strong>Adres:</strong> Ören Mahallesi, 123. Sokak No:4, Daire:5, Manisa, Türkiye</p>
+            <p><strong>Telefon:</strong> +90 (212) 555-1234</p>
+            <p><strong>E-posta:</strong> info@ornek.com</p>
+            <p><strong>Web Sitesi:</strong> <a href="https://www.ornek.com" target="_blank">www.ornek.com</a></p>
+            <p><strong>Çalışma Saatleri:</strong></p>
+            <ul>
+                <li>Pazartesi - Cuma: 09:00 - 18:00</li>
+                <li>Cumartesi: 10:00 - 14:00</li>
+                <li>Pazar: Kapalı</li>
+            </ul>
+        </div>
+        
+        <div class="card map-container">
+            <h2>Harita</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.568544468824!2d27.42840231532083!3d38.41922497972251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c5b3a1c8a9d6c9%3A0x5045675218ceed30!2sManisa%2C%20Turkey!5e0!3m2!1str!2str!4v1615400000000!5m2!1str!2str" 
+    width="600"></iframe>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+  
+<footer>
+  <div class="container,aw" >
+    <div class="wrapper">
+      <div class="footer-widget">
+        <a href="#">
+          <img src="../Logo maker project-1.png" class="logo"  width="200" height="auto"/>
+        </a>
+        <p class="desc">
+         "Şirketimizi sosyal medya hesaplarımızdan takip edebilirsiniz"
+        </p>
+        <ul class="socials">
+          <li>
+            <a href="#">
+              <img src="Resim/pngwing.com (14).png" width="33" height="auto">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="Resim/pngwing.com (7).png" width="33" height="auto">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="Resim/pngwing.com (8).png" width="33" height="auto">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="Resim/pngwing.com (13).png " width="33" height="auto" > 
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-widget">
+        <h6>Projeler</h6>
+        <ul class="links">
+          <ul class="links">
+            <li><a href="../Projeler/WebMinds/Webminds.html">Web Projesi:WebMinds</a></li>
+            <li><a href="../Projeler/WebMinds/Webminds.html   ">Akıllı Şehir Yönetimi Platformu:InnoCity</a></li>
+            <li><a href="../Projeler/Fitlife/FitlifeTracker.html">Mobil Uygulama: FitLife Tracker</a></li>
+            <li><a href="../Projeler/DataFusion/data.html">Yapay Zeka ve Büyük Veri Projesi:DataFusion</a></li>
+            <li><a href="../Projeler/Securenet/securenet.html">Siber Güvenlik Projesi: SecureNet</a></li>
+        </ul>
+      </div>
+      <div class="footer-widget">
+        <h6>Hizmetler</h6>
+        <ul class="links">
+          <li><a href="../Hizmetler/WebTasarım.html">Web Tasarımları</a></li>
+          <li><a href="../Hizmetler/Bulut İşlemleri/bulut.html">Bulut Bilişim Hizmetleri</a></li>
+          <li><a href="../Hizmetler/Hosting/hosting.html">Hosting</a></li>
+          <li><a href="../Hizmetler/Site Güvenliği/SiteGüven.html">Site Güvenliği
+          <li><a href="../Hizmetler/Yapay Zeka/Görüntü İşleme/Görüntü.html">Görüntü-İşleme</a></li>
+          <li><a href="../Hizmetler/Mobil Uygulama Geliş/mobil.html">Mobil Uygulama</a></li>
+          </a></li>
+        </ul>
+      </div>
+      <div class="footer-widget">
+        <h6>Hakkımızda</h6>
+        <ul class="links">
+          <li><a href="../Hakkında Ve İletişim/İletişim.html">İletişim</a></li>
+         
+        </ul>
+      </div>
+    </div>
+    <div class="copyright-wrapper">
+      <p>
+        Design  Developed by
+        <a href="#" target="blank">Mehmet Kıvrak</a>
+      </p>
+    </div>
+  </div>
+</footer>
+    
+</body>
+</html>

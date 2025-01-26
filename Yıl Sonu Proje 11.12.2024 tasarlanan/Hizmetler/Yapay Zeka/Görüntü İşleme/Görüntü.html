@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Görüntü İşleme </title>
+    <link rel="stylesheet" href="görüntü.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+.parallax {
+    /* Arka plan resmi */
+    background-image: url('./Resim/Görüntü-İşleme.jpg'); /* Kendi arka plan resminizi buraya ekleyin */
+    height: 500px; /* Yükseklik ayarı */
+    background-attachment: fixed; /* Arka planın sabit kalmasını sağlar */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.content {
+    height: 400px; /* İçerik bölümü yüksekliği */
+    background-color: rgb(179, 82, 82); /* İçerik arka plan rengi */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+p {
+    margin: 10px 0 0;
+}
+
+.content {
+    display: flex; /* Flexbox kullanarak yan yana yerleştirir */
+    justify-content: space-between; /* İçerikler arasında boşluk bırakır */
+    align-items: center; /* Dikey olarak ortalar */
+}
+
+.content-container {
+    display: flex;
+    align-items: center ; /* Dikey ortalama */
+    justify-content: center; /* Yatay ortalama */
+    padding: 50px;
+    max-width: 2900px;
+    margin: 0 auto;
+    padding: 90px 0; /* Üst ve alt kısımlarda 20px boşluk */
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.content-right {
+    display: flex; /* Flexbox ile hizalama */
+    justify-content: flex-end; /* Yatayda sağa yaslama */
+    align-items: flex-end; /* Dikeyde ortalama */
+    padding: 0px; /* İçerik etrafında boşluk */
+    background-color: #ffffff; /* Arka plan rengi */
+    border-radius: 10px; /* Kenar yuvarlama */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölgelendirme efekti */
+    margin-left: 270px; /* Soldan boşluk */
+    max-width: 700px; /* Maksimum genişlik */
+    width: calc(100% - 40px); /* Genişlik ayarı, toplam genişlikten padding'leri çıkararak */
+}
+
+.content-left {
+    padding: 20px; /* İçerik etrafında boşluk */
+    background-color: rgba(176, 52, 52, 0.496); /* Hafif şeffaf arka plan */
+    border-radius: 8px; /* Kenar yuvarlama */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.679); /* Hafif gölgelendirme */
+    max-width: 900px; /* Maksimum genişlik */
+    margin: 20px; /* Üst, alt, sol ve sağ boşluk */
+    flex: 3; /* Esneme özelliği */
+    margin-bottom: 159px;
+    margin-top: 170px;
+    margin-right: 40px;
+    height: auto; /* Yükseklik otomatik ayarlanacak */
+    max-width: 40%; /* Resmin maksimum genişliği %100 */
+  
+
+}
+
+
+.content-right img {
+    max-width: 140%; /* Resmin maksimum genişliği %100 */
+    height: auto; /* Yükseklik otomatik ayarlanacak */
+    border-radius: 10px; /* Resmin kenar yuvarlama */
+}
+
+.zx h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.zx h1:hover {
+    color: #007BFF; /* Başlık üzerine gelindiğinde renk değişimi */
+}
+
+.zx p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+}
+.content-left img {
+    max-width: 100%; /* Resmin genişliğini %100 yaparak duyarlı hale getirme */
+    height: auto; /* Yüksekliği otomatik ayarlama */
+}
+
+
+
+/* Services Section */
+.services-section {
+  padding: 80px 0;
+}
+
+.services-section h2 {
+  text-align: center;   
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+}
+
+.service-box {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+}
+
+.service-box img {
+  max-width: 80px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.i1 {
+  border-top: 5px solid #e34c26; /* HTML */
+}
+
+.i2 {
+  border-top: 5px solid #264de4; /* CSS */
+}
+
+.i3 {
+  border-top: 5px solid #f7df1e; /* JavaScript */
+}
+
+.i4 {
+  border-top: 5px solid #68a063; /* Node.js */
+}
+
+.i5 {
+  border-top: 5px solid #61dafb; /* React */
+}
+
+
+
+</style>
+</head>
+<body>
+
+</div>
+<nav class="navbar">
+  <div id="companyLogo">
+    <img src="Resim/Logo maker project-1.png" alt="">
+</div>
+  
+<ul>
+  <li><a href="../../../Anasayfa/Anasayfa.html">Anasayfa</a></li>
+    <li><a href="#" id="hizmetler-link">Hizmetler<span
+                class="material-symbols-outlined arrow"></span></a>
+
+        <ul id="hizmetmenu">
+            <li><a href="../../WebTasarım.html">Modern Web Tasarımları</a></li>
+            <li><a href="../../Seo Çalışmaları/seo.html">SEO Çalışmaları</a></li>
+            <li><a href="../../Bulut İşlemleri/bulut.html">Bulut Bilişim Hizmetleri</a></li>
+            <li><a href="" id="eticaret">Yapay Zeka ve Makine Öğrenimi<span id="msoe"
+                        class="material-symbols-outlined ticspan"></span></a>
+
+                <ul id="eticaretMenu">
+                    <li><a href="">Görüntü İşleme ve Nesne Tanıma</a></li>
+                </ul>
+
+            </li>
+
+            <li><a href="../../Hosting/hosting.html">Hosting</a></li>
+
+
+        </ul>
+
+        </li>
+
+        <li><a id="projelerLink" href="">Projeler<span
+          class="material-symbols-outlined arrow"></span></a>
+
+          <ul class="links">
+            <li><a href="../../../Projeler/WebMinds/Webminds.html">Web Projesi:WebMinds</a></li>
+            <li><a href="../../../Projeler/InnoCity/ınno.html">Akıllı Şehir Yönetimi Platformu:InnoCity</a></li>
+            <li><a href="../../../Projeler/Fitlife/FitlifeTracker.html">Mobil Uygulama: FitLife Tracker</a></li>
+            <li><a href="../../../Projeler/DataFusion/data.html">Yapay Zeka ve Büyük Veri Projesi:DataFusion</a></li>
+            <li><a href="../../../Projeler/Securenet/securenet.html">Siber Güvenlik Projesi: GuardSphere</a></li>
+        </ul>
+
+</li>
+<li><a href="../../../Hakkında Ve İletişim/Hakkında.html">Hakkımızda</a></li>
+<li><a href="../../../Hakkında Ve İletişim/İletişim.html">İletişim</a></li>
+<li><a href="https://www.instagram.com/#"><img src="Resim/pngwing.com (6).png" width="30" height="30"></a></li>
+<li><a href="https://www.youtube.com/"><img src="Resim/pngwing.com (7).png" width="40" height="30"></a></li>
+<li><a href="https://www.facebook.com/?stype=lo&flo=1&deoia=1&jlou=AfcJ8d2LeEVns0XnDRW16w8cTnoVH0NJQFo-9dXuMV_4MAQbqu1esLjur6Mra3yHGASgRuIu0ssMan28eChEjFqybMx767uBXcmsG9ViqUKj8g&smuh=32622&lh=Ac-x5OgEJ0FQFU49y5I"><img src="Resim/pngwing.com (8).png" width="30" height="30"></a></li>
+
+
+    </ul>
+</nav>
+
+
+
+<section class="intro-section">
+    <div class="container">
+        <h1>Görüntü İşleme</h1>
+        <p> Şirketimizin görüntüleri analiz etme, işleme ve yorumlama süreçlerini içerir. Bu alanda, nesne tanıma, görüntü iyileştirme ve görüntü sınıflandırma gibi teknikler kullanarak, verimliliği artırmayı ve karar destek sistemlerini geliştirmeyi hedefliyoruz.
+        </p>
+    </div>
+</section> 
+
+<div class="content-container">
+    <div class="content-left">
+        <h1 class="">Görüntü İyileştirme      </h1>
+        <p class="">Şirketimiz, görüntü iyileştirme alanında çeşitli hizmetler sunarak müşterilerimizin ihtiyaçlarına yönelik çözümler geliştirmektedir. Bu hizmetler arasında, düşük kaliteli görüntülerin renk, kontrast ve parlaklık ayarlarını optimize ederek daha net ve canlı hale getirilmesi amacıyla görüntü düzeltme, istenmeyen gürültülerin ve bozulmaların azaltılması için gelişmiş filtreleme tekniklerinin uygulandığı gürültü giderme, görüntülerin detaylarını artırmak için kenar keskinleştirme yöntemleri kullanarak daha belirgin ve net sonuçlar elde edilmesini sağlayan keskinleştirme, görüntülerin farklı renk uzaylarına dönüştürülmesi ile belirli uygulamalar için optimize edilmesi amacıyla renk dönüşümü ve eski veya hasar görmüş görüntülerin onarılmasıyla orijinal kalitesine kavuşturulması sürecini içeren restorasyon yer almaktadır. Bu hizmetler sayesinde, müşterilerimizin görüntüleri üzerinde daha fazla kontrol sahibi olmalarını ve daha etkili sonuçlar elde etmelerini sağlıyoruz. Amacımız, her sektördeki müşterilerimizin görsel içeriklerini en üst düzeye çıkarmaktır.</p>
+    </div>
+    <div class="content-right">
+        <img src="Resim/online-fotograf-kalitesi-arttirma-Canva.webp" alt="Örnek Resim">
+    </div>
+    
+</div>
+<div class="parallax"></div>
+
+<div class="content-container">
+   
+    <div class="content-right">
+        <img src="Resim/1_Rz-sWhmW4LjNWbon4Y1pgg.jpg" alt="Örnek Resim">
+    </div>
+    <div class="content-left">
+        <h1 class="">Görüntü Analizi
+        </h1>
+        <p class=""> Görüntü Analizi Hizmetleri
+            Şirketimiz, görüntü analizi alanında sunduğu hizmetlerle müşterilerine değerli bilgiler sağlamaktadır. Görüntü analizi, görüntülerden anlamlı veriler elde etmek için çeşitli tekniklerin uygulandığı bir süreçtir. Bu hizmetler arasında, nesne tanıma ve izleme, görüntülerdeki belirli nesnelerin tespit edilmesi ve takip edilmesi amacıyla gelişmiş algoritmaların kullanılması; segmentasyon, görüntülerin farklı bileşenlerine ayrılarak her bir bileşenin ayrı ayrı analiz edilmesi; özellik çıkarımı, görüntülerden önemli özelliklerin belirlenmesi ve bu özelliklerin sınıflandırma veya tanıma süreçlerinde kullanılması yer almaktadır. Ayrıca, görüntü sınıflandırma hizmetimizle, makine öğrenimi ve istatistiksel yöntemler kullanarak görüntüleri belirli kategorilere ayırarak daha sistematik bir analiz süreci sunuyoruz. Bu sayede, müşterilerimizin verimliliğini artırmayı ve karar destek sistemlerini güçlendirmeyi hedefliyoruz. Amacımız, her sektördeki müşterilerimize en doğru ve etkili çözümleri sunmaktır.</p>
+    </div>
+</div> 
+  
+<div class="parallax"></div>
+
+<div class="content-container">
+    <div class="content-left">
+        <h1 class="">Görüntü Sınıflandırma</h1>
+        <p class="">Şirketimiz, görüntü sınıflandırma alanında sunduğu hizmetlerle müşterilerine etkili ve anlamlı çözümler sunmaktadır. Görüntü sınıflandırma, görüntülerin belirli kategorilere ayrılması sürecidir ve bu süreçte makine öğrenimi ve yapay zeka teknikleri aktif olarak kullanılmaktadır. Hizmetlerimiz arasında, görüntülerdeki nesnelerin otomatik olarak tanınması ve sınıflandırılması, derin öğrenme algoritmaları ile desteklenen yüksek doğruluk oranları ile gerçekleştirilir. Ayrıca, özel veri setlerine dayalı olarak özelleştirilmiş sınıflandırma modelleri geliştirme, müşterilerin ihtiyaçlarına uygun çözümler sunmak için önemli bir hizmetimizdir. Görüntü sınıflandırma süreçlerimiz, tarım, sağlık, güvenlik ve otomotiv gibi çeşitli sektörlerde uygulanarak, karar verme süreçlerini hızlandırmakta ve verimliliği artırmaktadır. Amacımız, müşterilerimizin görsel verilerini en iyi şekilde değerlendirerek iş süreçlerini optimize etmelerine yardımcı olmaktır.</p>
+    </div>
+    <div class="content-right">
+        <img src="Resim/1_pWoHu_uUDebBSSNmyMydLQ.png" alt="Örnek Resim">
+    </div>
+    
+</div>
+
+<section class="services-section">
+    <h2>Web Sitesi Geliştirirken Kullandığımız Yazılım Dilleri</h2>
+    <div class="services-grid">
+      <div class="service-box i1">
+        <img class="ir1" src="Resim/html.png" alt="HTML" width="80px" height="auto">
+      </div>
+      <div class="service-box i2">
+        <img class="ir1" src="Resim/css.png" alt="CSS" width="80px" height="auto">
+      </div>
+      <div class="service-box i3">
+        <img class="ir1" src="Resim/js.png" alt="JavaScript" width="80px" height="auto">
+      </div>
+      <div class="service-box i4">
+        <img class="ir1" src="Resim/ndjs.png" alt="Node.js" width="80px" height="auto">
+      </div>
+      <div class="service-box i5">
+        <img class="ir1" src="Resim/react.png" alt="React" width="80px" height="auto">
+      </div>
+    </div>
+  </section>
+  
+ <footer>
+            <div class="container,aw" >
+              <div class="wrapper">
+                <div class="footer-widget">
+                  <a href="#">
+                    <img src="Resim/Logo maker project-1.png" class="logo"  width="200" height="auto"/>
+                  </a>
+                  <p class="desc">
+                   "Şirketimizi sosyal medya hesaplarımızdan takip edebilirsiniz"
+                  </p>
+                  <ul class="socials">
+                    <li>
+                      <a href="#">
+                        <img src="Resim/pngwing.com (14).png" width="33" height="auto">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="Resim/pngwing.com (7).png" width="33" height="auto">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="Resim/pngwing.com (8).png" width="33" height="auto">
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="Resim/pngwing.com (13).png " width="33" height="auto" > 
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-widget">
+                  <h6>Projeler</h6>
+                  <ul class="links">
+                    <ul class="links">
+                      <li><a href="../../../Projeler/InnoCity/ınno.html">Web Projesi:WebMinds</a></li>
+                      <li><a href="../../../Projeler/InnoCity/ınno.html">Akıllı Şehir Yönetimi Platformu:InnoCity</a></li>
+                      <li><a href="../../../Projeler/Fitlife/FitlifeTracker.html">Mobil Uygulama: FitLife Tracker</a></li>
+                      <li><a href="../../../Projeler/DataFusion/data.html">Yapay Zeka ve Büyük Veri Projesi:DataFusion</a></li>
+                      <li><a href="../../../Projeler/Securenet/securenet.html">Siber Güvenlik Projesi: GuardSphere</a></li>
+                  </ul>
+                </div>
+                <div class="footer-widget">
+                  <h6>Hizmetler</h6>
+                  <ul class="links">
+                    <li><a href="../../WebTasarım.html">Web Tasarımları</a></li>
+                    <li><a href="../../Bulut İşlemleri/bulut.html">Bulut Bilişim Hizmetleri</a></li>
+                    <li><a href="../../Hosting/hosting.html">Hosting</a></li>
+                    <li><a href="../../Site Güvenliği/SiteGüven.html">Site Güvenliği
+                    <li><a href="../../Mobil Uygulama Geliş/mobil.html">Mobil Uygulama</a></li>
+                    </a></li>
+                  </ul>
+                </div>
+                <div class="footer-widget">
+                  <h6>Hakkımızda</h6>
+                  <ul class="links">
+                    <li><a href="../../../Hakkında Ve İletişim/İletişim.html">İletişim</a></li>
+                    <li><a href="../../../Hakkında Ve İletişim/Hakkında.html">Hakkımızda</a></li>
+
+                  </ul>
+                </div>
+              </div>
+              <div class="copyright-wrapper">
+                <p>
+                  Design  Developed by
+                  <a href="#" target="blank">Mehmet Kıvrak</a>
+                </p>
+              </div>
+            </div>
+          </footer>
+    
+</body>
+</html>

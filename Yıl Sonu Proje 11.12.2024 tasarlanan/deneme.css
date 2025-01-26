@@ -1,0 +1,1004 @@
+.banner_main {
+    background: url('Resim/anaresim.jpg') no-repeat center center; /* Arka plan resmi */
+    background-size: cover; /* Arka plan resmini ekranı kaplayacak şekilde ayarla */
+    color: #fff; /* Metin rengi */
+    min-height: 100vh; /* Banner yüksekliği: ekran yüksekliğine eşit */
+    display: flex; /* Flexbox kullanarak içerikleri ortala */
+    align-items: center; /* Dikeyde ortala */
+    justify-content: center; /* Yatayda ortala */
+    text-align: center; /* Metni ortala */
+  }
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .text-bg {
+    background-color: rgba(0, 0, 0, 0.5); /* Daha belirgin yarı saydam arka plan rengi */
+    padding: 60px; /* İçerik için padding ayarla */
+    border-radius: 15px; /* Kenarları daha yuvarlak yap */
+    max-width: 800px; /* Maksimum genişlik ayarla */
+    width: 100%; /* Genişliği %100 yap */
+    z-index: 10; /* Diğer içeriklerin üstünde görünmesi için z-index */
+    position: relative; /* Konumlandırma için relative kullan */
+    top: -20px; /* Yukarı almak için negatif değer */
+    margin: 20px auto; /* Yatayda ortalamak için auto kullan */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Gölge efekti ekle */
+    backdrop-filter: blur(10px); /* Arka planı bulanıklaştır */
+    color: white; /* Yazı rengini beyaz yap */
+    font-family: 'Arial', sans-serif; /* Yazı tipi ayarı */
+    text-align: center; /* Metni ortala */
+  }
+  .a1 {
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    color: #2c3e50; /* Koyu gri renk */
+    font-size: 20px; /* Yazı boyutu */
+    font-family: 'Arial', sans-serif; /* Modern font */
+    font-weight: normal; /* Normal yazı kalınlığı */
+    padding: 12px 25px; /* İç boşluk (üst-alt, sağ-sol) */
+    border: 4px solid #2c3e50; /* Kenarlık */
+    border-radius: 30px; /* Yuvarlak köşeler */
+    background-color: #ecf0f1; /* Açık gri arka plan */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    transition: all 0.4s ease-in-out; /* Yumuşak geçiş */
+  }
+  .a1:hover {
+    color: #fff; /* Üzerine gelindiğinde yazı beyaz olur */
+    background-color: #2c3e50; /* Üzerine gelindiğinde arka plan koyu gri olur */
+    border-color: #ecf0f1; /* Kenarlık rengini açık gri yapar */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Hoverda gölgeyi artır */
+  }
+  .col-md-12 {
+    flex: 0 0 100%; /* Tam genişlik */
+    max-width: 100%;
+    padding: 15px;
+  }
+  .col-md-4 {
+    flex: 0 0 33.3333%; /* Üçte bir genişlik */
+    max-width: 33.3333%;
+    padding: 15px;
+  }
+  .box {
+    background-color: #e7e7e700; /* Kutu arka plan rengi */
+    border: 2px solid #fbc12d00; /* Kutu kenarlığı */
+    border-radius: 10px; /* Kenar yuvarlama */
+    padding: 20px; /* İçerik etrafında boşluk */
+    margin: 15px; /* Üst ve alt boşluk */
+    text-align: center; /* Metni ortala */
+    transition: transform 0.3s; /* Hover efekti için geçiş süresi */
+  }
+  
+  .box:hover {
+    transform: rotate(2deg); /* Hover sırasında hafif döndür */
+  }
+  
+
+
+  /* Slider Kısmı */
+.carousel {
+  margin: 20px 0;
+  background-color: #343a40; /* Koyu arka plan */
+  padding: 20px;
+}
+/* Haber Bülteni */
+.news-header {
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #1e1e1e; /* Koyu gri arka plan */
+  border: 2px solid #00bcd4; /* Mavi kenar */
+  border-radius: 10px; /* Yuvarlatılmış köşeler */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Derin gölge */
+}
+.news-header h2 {
+  font-size: 2.5em;
+  color: #ffffff; /* Beyaz başlık rengi */
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Modern yazı tipi */
+  letter-spacing: 1.5px; /* Harfler arası boşluk */
+  text-transform: uppercase; /* Büyük harf yapma */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.news-header h2:hover {
+  color: #00bcd4; /* Hover durumunda başlık rengi değişimi */
+  text-shadow: 0 0 10px rgba(0, 188, 212, 0.8); /* Parlak gölge efekti */
+}
+/* Carousel içindeki haber kutuları */
+.news-box {
+  background-color: #ffffff; /* Kutuların arka plan rengi */
+  border: 1px solid #dee2e6; /* Kenar rengi */
+  border-radius: 10px; /* Kenar yuvarlama */
+  padding: 20px; /* İçerik için daha fazla boşluk */
+  margin-bottom: 20px; /* Alt boşluk */
+  transition: transform 0.2s, box-shadow 0.2s; /* Hover efekti için geçiş */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+.news-box:hover {
+  transform: scale(1.05); /* Hover efekti */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Hover durumunda gölge derinliği artırma */
+}
+/* Resim ayarları */
+.news-box figure {
+  margin: 0;
+}
+.news-box img {
+  width: 100%; /* Resim genişliği */
+  height: auto; /* Yükseklik otomatik */
+  border-radius: 10px; /* Resim kenar yuvarlama */
+}
+/* Haber başlıkları */
+.news-box h3 {
+  font-size: 1.5em; /* Başlık boyutu artırıldı */
+  color: #007bff; /* Başlık rengi */
+  margin: 10px 0;
+  font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif; /* Modern yazı tipi */
+  text-transform: capitalize; /* İlk harfleri büyük yapma */
+  transition: color 0.3s ease; /* Renk geçişi */
+}
+.news-box h3:hover {
+  color: #0056b3; /* Hover durumunda başlık rengi değişimi */
+}
+/* Haber açıklamaları */
+.news-box p {
+  font-size: 1em; /* Açıklama boyutu artırıldı */
+  color: #6c757d; /* Açıklama rengi */
+  line-height: 1.5; /* Satır yüksekliği */
+}
+/* Carousel Kontrolleri */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(255, 255, 255, 0.229); /* Simgeler rengi */
+  border-radius: 50%; /* Yuvarlak simgeler */
+  transition: background-color 0.3s ease; /* Geçiş efekti */
+}
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: rgba(255, 255, 255, 0.5); /* Hover durumunda simgeler rengi */
+}
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .news-box {
+      margin-bottom: 15px; /* Mobil için alt boşluk */
+  }
+  .news-header h2 {
+      font-size: 1.5em; /* Mobil için başlık boyutu */
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+/* Ek Grid Ayarları */
+.col-md-4 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  padding: 15px;
+}
+
+/* Service Section */
+.service_section {
+  position: relative; /* İçerik konumlandırması için relative ayarı, alt öğelerin konumlandırılmasına olanak tanır */
+}
+.service_section .box {
+  margin-top: 30px; /* Her kutunun üstünde 30px boşluk bırakır */
+  text-align: center; /* Kutulardaki metinleri ortalar */
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15); /* Hafif bir gölge efekti ekler */
+  padding: 25px 15px; /* İçerik etrafında 25px üst-alt, 15px sağ-sol boşluk bırakır */
+  transition: all 0.3s; /* Geçiş efektleri için 0.3s süre tanımlar */
+  display: flex; /* Flexbox düzeni kullanarak içeriği hizalar */
+  flex-direction: column; /* İçeriği dikey olarak hizalar */
+  align-items: center; /* İçeriği yatayda ortalar */
+}
+.service_section .box .img-box {
+  width: 65px; /* Resim kutusunun genişliğini 65px yapar */
+  height: 65px; /* Resim kutusunun yüksekliğini 65px yapar */
+  display: flex; /* Flexbox düzeni kullanarak içeriği hizalar */
+  justify-content: center; /* Resmi yatayda ortalar */
+  align-items: center; /* Resmi dikeyde ortalar */
+}
+.service_section .box .img-box img {
+  max-height: 100%; /* Resmin yüksekliğini kutu yüksekliğine göre ayarlar */
+  max-width: 100%; /* Resmin genişliğini kutu genişliğine göre ayarlar */
+  transition: all 0.3s; /* Resim için geçiş efektleri tanımlar */
+}
+.service_section .box .detail-box {
+  margin-top: 15px; /* Detay kutusu ile üstteki içerik arasında 15px boşluk bırakır */
+}
+.service_section .box .detail-box h5 {
+  font-weight: bold; /* Başlık metnini kalın yapar */
+}
+.service_section .box .detail-box p {
+  margin: 0; /* Varsayılan dış boşluğu kaldırır */
+}
+.service_section .box:hover {
+  background-color: #da7426; /* Hover durumunda arka plan rengini değiştirir (turuncu) */
+  color: #ffffff; /* Hover durumunda metin rengini beyaz yapar */
+}
+.service_section .box:hover .img-box img {
+  filter: brightness(0) invert(1); /* Hover durumunda resmi ters çevirir (renkleri tersine çevirir) */
+}
+.service_section .btn-box {
+  display: flex; /* Flexbox düzeni kullanarak butonları hizalar */
+  justify-content: center; /* Butonları yatayda ortalar */
+  margin-top: 45px; /* Buton kutusunun üstünde 45px boşluk bırakır */
+  padding-bottom: 50px; /* Buton kutusunun altında 50px boşluk bırakır */
+}
+.service_section .btn-box a {
+  display: inline-block; /* Buton bağlantısını blok olarak gösterir */
+  padding: 10px 45px; /* Butonun içindeki metin etrafında 10px üst-alt, 45px sağ-sol boşluk bırakır */
+  background-color: #da7426; /* Butonun arka plan rengini turuncu yapar */
+  color: #ffffff; /* Buton metninin rengini beyaz yapar */
+  transition: all 0.3s; /* Buton için geçiş efektleri tanımlar */
+  border: 1px solid #da7426; /* Butonun kenarını turuncu ile çizer */
+}
+.service_section .btn-box a:hover {
+  background-color: transparent; /* Hover durumunda buton arka planını şeffaf yapar */
+  color: #da7426; /* Hover durumunda buton metninin rengini turuncu yapar */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Service Section */
+.service_section {
+  position: relative; /* Bu bölümün konumunu belirler, diğer öğelerle ilişkisini ayarlamak için kullanılır. */
+}
+
+.service_section .box {
+  margin-top: 30px; /* Kutular arasında 30 piksel boşluk bırakır. */
+  text-align: center; /* İçerikleri yatay olarak ortalar. */
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15); /* Kutunun etrafına hafif bir gölge ekler. */
+  padding: 25px 15px; /* İçerik ile kenarlar arasında 25 piksel üst-alt, 15 piksel sağ-sol boşluk bırakır. */
+  transition: all 0.3s; /* Tüm değişikliklerin 0.3 saniyede gerçekleşmesini sağlar. */
+  display: flex; /* Flexbox düzeni kullanır. */
+  flex-direction: column; /* İçerikleri dikey olarak düzenler. */
+  align-items: center; /* İçerikleri yatay olarak ortalar. */
+}
+
+.service_section .box .img-box {
+  width: 65px; /* Resim kutusunun genişliğini 65 piksel yapar. */
+  height: 65px; /* Resim kutusunun yüksekliğini 65 piksel yapar. */
+  display: flex; /* Flexbox düzeni kullanır. */
+  justify-content: center; /* İçerikleri yatay olarak ortalar. */
+  align-items: center; /* İçerikleri dikey olarak ortalar. */
+}
+
+.service_section .box .img-box img {
+  max-height: 100%; /* Resmin maksimum yüksekliğini %100 yapar, kutunun yüksekliğine göre ayarlanır. */
+  max-width: 100%; /* Resmin maksimum genişliğini %100 yapar, kutunun genişliğine göre ayarlanır. */
+  transition: all 0.3s; /* Tüm değişikliklerin 0.3 saniyede gerçekleşmesini sağlar. */
+}
+
+.service_section .box .detail-box {
+  margin-top: 15px; /* Detay kutusu ile üstteki öğe arasında 15 piksel boşluk bırakır. */
+}
+
+.service_section .box .detail-box h5 {
+  font-weight: bold; /* Başlık metnini kalın yapar. */
+}
+
+.service_section .box .detail-box p {
+  margin: 0; /* Paragrafın etrafındaki varsayılan boşluğu kaldırır. */
+}
+
+.service_section .box:hover {
+  background-color: #da7426; /* Fare ile üzerine gelindiğinde arka plan rengini değiştirir. */
+  color: #ffffff; /* Metin rengini beyaz yapar. */
+}
+
+.service_section .box:hover .img-box img {
+  filter: brightness(0) invert(1); /* Fare ile üzerine gelindiğinde resmin rengini tersine çevirir ve parlaklığını artırır. */
+}
+
+.service_section .btn-box {
+  display: flex; /* Flexbox düzeni kullanır. */
+  justify-content: center; /* İçerikleri yatay olarak ortalar. */
+  margin-top: 45px; /* Buton kutusunun üstünde 45 piksel boşluk bırakır. */
+  padding-bottom: 50px; /* Buton kutusunun altında 50 piksel boşluk bırakır. */
+}
+
+.service_section .btn-box a {
+  display: inline-block; /* Bağlantıyı blok olarak gösterir, içeriği genişletir. */
+  padding: 10px 45px; /* İçerik ile kenarlar arasında 10 piksel üst-alt, 45 piksel sağ-sol boşluk bırakır. */
+  background-color: #da7426; /* Bağlantının arka plan rengini turuncu yapar. */
+  color: #ffffff; /* Bağlantı metninin rengini beyaz yapar. */
+  transition: all 0.3s; /* Tüm değişikliklerin 0.3 saniyede gerçekleşmesini sağlar. */
+  border: 1px solid #da7426; /* Bağlantının etrafında turuncu bir çerçeve oluşturur. */
+}
+
+.service_section .btn-box a:hover {
+  background-color: transparent; /* Fare ile üzerine gelindiğinde arka plan rengini saydam yapar. */
+  color: #da7426; /* Metin rengini turuncu yapar. */
+}
+
+/*Footer */
+footer {
+  position: relative; /* Footer'ın konumunu belirler, diğer öğelerle ilişkisini ayarlamak için kullanılır. */
+  width: 100%; /* Footer'ın genişliğini %100 yapar, sayfanın tamamını kaplar. */
+  height: auto; /* Yüksekliği otomatik olarak ayarlanır. */
+  padding-top: 80px; /* Üst kısmında 80 piksel boşluk bırakır. */
+  background-color: #082142; /* Arka plan rengini koyu mavi yapar. */
+}
+
+.wrapper {
+  display: flex; /* Flexbox düzeni kullanır. */
+  justify-content: space-between; /* İçerikleri yatay olarak eşit aralıklarla dağıtır. */
+  flex-direction: row; /* İçerikleri yatay olarak sıralar. */
+  flex-wrap: wrap; /* İçerik taşarsa bir alt satıra geçmesine izin verir. */
+}
+
+.wrapper .footer-widget {
+  width: calc(20% - 30px); /* Her widget'ın genişliğini %20 eksi 30 piksel olarak ayarlar. */
+  margin: 0 15px 50px; /* Widget'lar arasında yanlarda 15 piksel, altta 50 piksel boşluk bırakır. */
+  padding: 0 12px; /* Widget içindeki içerik ile kenarları arasında 12 piksel boşluk bırakır. */
+}
+
+.wrapper .footer-widget:nth-child(1) {
+  width: calc(40% - 50px); /* İlk widget'ın genişliğini %40 eksi 50 piksel yapar. */
+  margin-right: 15px; /* İlk widget'ın sağında 15 piksel boşluk bırakır. */
+}
+
+.wrapper .footer-widget .logo {
+  margin-bottom: 30px; /* Logo ile altındaki öğe arasında 30 piksel boşluk bırakır. */
+  vertical-align: middle; /* Logo dikey olarak ortalanır. */
+}
+
+.wrapper .footer-widget p {
+  margin-bottom: 30px; /* Paragraf ile altındaki öğe arasında 30 piksel boşluk bırakır. */
+  font-size: 16px; /* Yazı boyutunu 16 piksel yapar. */
+  line-height: 24px; /* Satır yüksekliğini 24 piksel yapar. */
+}
+
+.wrapper .footer-widget .socials {
+  display: flex; /* Flexbox düzeni kullanır. */
+  align-items: center; /* İçerikleri dikey olarak ortalar. */
+  justify-content: flex-start; /* İçerikleri sola yaslar. */
+}
+
+.wrapper .footer-widget .socials li {
+  list-style: none; /* Liste işaretlerini kaldırır. */
+}
+
+.wrapper .footer-widget .socials li a {
+  width: 44px; /* Sosyal medya simgesi bağlantısının genişliğini 44 piksel yapar. */
+  height: 44px; /* Sosyal medya simgesi bağlantısının yüksekliğini 44 piksel yapar. */
+  margin-right: 10px; /* Bağlantılar arasında sağda 10 piksel boşluk bırakır. */
+  color: #ffffff; /* Metin rengini beyaz yapar. */
+  background-color: rgba(3, 127, 243, 0.5); /* Arka plan rengini yarı saydam mavi yapar. */
+  border-radius: 50%; /* Bağlantıyı daire şeklinde yapar. */
+  font-size: 20px; /* Yazı boyutunu 20 piksel yapar. */
+  text-decoration: none; /* Alt çizgiyi kaldırır. */
+  display: flex; /* Flexbox düzeni kullanır. */
+  align-items: center; /* İçerikleri dikey olarak ortalar. */
+  justify-content: center; /* İçerikleri yatay olarak ortalar. */
+  transition: all 0.3s ease-out; /* Tüm değişikliklerin 0.3 saniyede gerçekleşmesini sağlar. */
+}
+
+.wrapper .footer-widget .socials li a:hover {
+  background-color: #037ef3; /* Fare ile üzerine gelindiğinde arka plan rengini koyu mavi yapar. */
+}
+
+.wrapper .footer-widget h6 {
+  color: #1ace0d; /* Başlık rengini yeşil yapar. */
+  margin: 10px 0 35px; /* Başlık ile üstteki ve alttaki öğeler arasında boşluk bırakır. */
+  font-size: 20px; /* Yazı boyutunu 20 piksel yapar. */
+  font-weight: 600; /* Yazıyı kalın yapar. */
+}
+
+.wrapper .footer-widget .links li {
+  list-style: none; /* Liste işaretlerini kaldırır. */
+}
+
+.wrapper .footer-widget .links li a {
+  color: #1ace0d; /* Bağlantı metninin rengini yeşil yapar. */
+  font-size: 16px; /* Yazı boyutunu 16 piksel yapar. */
+  text-decoration: none; /* Alt çizgiyi kaldırır. */
+  text-transform: capitalize; /* Metindeki her kelimenin ilk harfini büyük yapar. */
+  line-height: 32px; /* Satır yüksekliğini 32 piksel yapar. */
+  transition: all 0.3s ease-out; /* Tüm değişikliklerin 0.3 saniyede gerçekleşmesini sağlar. */
+}
+
+.wrapper .footer-widget .links li a:hover {
+  color: #037ef3; /* Fare ile üzerine gelindiğinde metin rengini koyu mavi yapar. */
+}
+
+.copyright-wrapper {
+  padding: 20px 0; /* Üst ve alt kısımlarda 20 piksel boşluk bırakır. */
+  border-top: 1px solid rgba(88, 89, 120, 0.4); /* Üst kısmında yarı saydam bir çerçeve ekler. */
+}
+
+.copyright-wrapper p {
+  color: rgba(88, 89, 120, 0.6); /* Metin rengini yarı saydam gri yapar. */
+  font-size: 14px; /* Yazı boyutunu 14 piksel yapar. */
+  font-weight: 500; /* Yazıyı yarı kalın yapar. */
+  text-align: center; /* Metni ortalar. */
+}
+
+.copyright-wrapper p a {
+  color: inherit; /* Bağlantı rengini üst öğeden miras alır. */
+  font-weight: 500; /* Bağlantıyı yarı kalın yapar. */
+  text-decoration: none; /* Alt çizgiyi kaldırır. */
+  transition: all 0.3s ease-out; /* Tüm değişikliklerin 0.3 saniyede gerçekleşmesini sağlar. */
+}
+
+.copyright-wrapper p a:hover {
+  color: #037ef3; /* Fare ile üzerine gelindiğinde bağlantı rengini koyu mavi yapar. */
+}
+
+/* Let's write the media query */
+@media (max-width: 992px) {
+  .container {
+    max-width: 960px; /* Ekran genişliği 992 pikselden az olduğunda konteynerin maksimum genişliğini 960 piksel yapar. */
+  }
+
+  .wrapper .footer-widget,
+  .wrapper .footer-widget:nth-child(1) {
+    width: calc(50% - 30px); /* Widget'ların genişliğini %50 eksi 30 piksel yapar. */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 720px; /* Ekran genişliği 768 pikselden az olduğunda konteynerin maksimum genişliğini 720 piksel yapar. */
+  }
+
+  .wrapper .footer-widget,
+  .wrapper .footer-widget:nth-child(1) {
+    width: 100%; /* Widget'ların genişliğini %100 yapar. */
+    margin: 0 10px 50px; /* Widget'lar arasında yanlarda 10 piksel, altta 50 piksel boşluk bırakır. */
+  }
+}
+.aa {
+  width: 308px; /* Paragrafın genişliği 308 piksel olarak ayarlanır. */
+  height: 240px; /* Paragrafın yüksekliği 240 piksel olarak ayarlanır. */
+}
+
+.img1 {
+  width: 247.48px; /* Resmin genişliği 247.48 piksel olarak ayarlanır. */
+  height: 136.39px; /* Resmin yüksekliği 136.39 piksel olarak ayarlanır. */
+}
+.az {
+  color: black; /* Metin rengini siyah yapar. */
+}
+.zx {
+  text-align: center; /* Metni ortalar. */
+}
+.a1 {
+  text-decoration: none; /* Alt çizgiyi kaldırır. */
+  color: #2c3e50; /* Koyu gri renk. */
+  font-size: 20px; /* Yazı boyutu 20 piksel. */
+  font-family: 'Arial', sans-serif; /* Modern bir font kullanır. */
+  font-weight: normal; /* Normal yazı kalınlığı. */
+  padding: 12px 25px; /* İç boşluk (üst-alt, sağ-sol) 12 piksel üst-alt, 25 piksel sağ-sol. */
+  border: 4px solid #2c3e50; /* Kenarlık rengi koyu gri. */
+  border-radius: 30px; /* Yuvarlak köşeler. */
+  background-color: #ecf0f1; /* Açık gri arka plan. */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti. */
+  transition: all 0.4s ease-in-out; /* Yumuşak geçiş efekti. */
+}
+
+.a1:hover {
+  color: #fff; /* Üzerine gelindiğinde yazı beyaz olur. */
+  background-color: #2c3e50; /* Üzerine gelindiğinde arka plan koyu gri olur. */
+  border-color: #ecf0f1; /* Üzerine gelindiğinde kenarlık rengi açık gri olur. */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Hover durumunda daha belirgin gölge. */
+  transform: translateY(-5px); /* Hover durumunda yukarıya kayar. */
+}
+
+.desc {
+  color: #1ace0d; /* Açık yeşil metin rengi. */
+}
+
+
+/*Navbar */
+body {
+  font-family: 'Arial', sans-serif; /* Sayfanın yazı tipi Arial ve sans-serif olarak ayarlanır. */
+  background-color: #153ca7; /* Arka plan rengi koyu mavi yapılır. */
+  margin: 0; /* Varsayılan margin'i sıfırlar. */
+  padding: 0; /* Varsayılan padding'i sıfırlar. */
+}
+
+.companyBar {
+  display: flex; /* Flexbox düzeni kullanır. */
+  justify-content: space-between; /* İçerikleri yatay olarak eşit aralıklarla dağıtır. */
+  align-items: center; /* İçerikleri dikey olarak ortalar. */
+}
+
+/* Logo ayarları */
+#companyLogo {
+  margin-right: auto; /* Logo ve menü arasında boşluk bırakmak için otomatik boşluk ekler. */
+}
+#companyLogo img {
+  height: 65px; /* Logonun yüksekliğini 65 piksel yapar. */
+  width: auto; /* Orantılı genişlik ayarlanır. */
+}
+
+/* Menü ikonları */
+#menu-bar {
+  display: none; /* Menü çubuğunu başlangıçta gizler. */
+}
+#menu-bar:checked ~ .navbar ul {
+  display: flex; /* Menü çubuğu işaretlendiğinde menüyü gösterir. */
+}
+
+/* Genel navbar ayarları */
+.navbar {
+  width: 100%; /* Navbar'ın genişliğini %100 yapar. */
+  background-color: #082142; /* Arka plan rengini koyu mavi yapar. */
+  padding: 10px 20px; /* İçerik etrafında 10 piksel üst-alt, 20 piksel sağ-sol boşluk bırakır. */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Alt gölge efekti ekler. */
+  position: fixed; /* Navbar'ı sabitler, sayfanın üst kısmında kalır. */
+  top: 0; /* Üst kenara hizalar. */
+  right: 0; /* Sağ kenara hizalar. */
+  z-index: 1000; /* Diğer öğelerin üstünde görünmesini sağlar. */
+}
+
+/* Menü listesi */
+.navbar ul {
+  list-style: none; /* Liste işaretlerini kaldırır. */
+  margin: 0; /* Varsayılan margin'i sıfırlar. */
+  padding: 0; /* Varsayılan padding'i sıfırlar. */
+  display: flex; /* Menü öğelerini yatay olarak hizalar. */
+  justify-content: flex-end; /* Menü öğelerini sağa hizalar. */
+  align-items: center; /* Dikey ortalama. */
+  gap: 15px; /* Menü öğeleri arasındaki boşluğu 15 piksel yapar. */
+  margin-left: auto; /* Sağda yer almasını sağlamak için otomatik boşluk ekler. */
+}
+
+/* Menü öğeleri */
+.navbar ul li {
+  position: relative; /* Alt menü konumlandırması için gerekli. */
+}
+.navbar ul li a {
+  color: white; /* Bağlantı metni rengini beyaz yapar. */
+  text-decoration: none; /* Alt çizgiyi kaldırır. */
+  padding: 10px 15px; /* İçerik etrafında 10 piksel üst-alt, 15 piksel sağ-sol boşluk bırakır. */
+  display: inline-block; /* Bağlantıyı blok olarak gösterir. */
+  font-size: 14px; /* Yazı boyutunu 14 piksel yapar. */
+  font-weight: bold; /* Yazıyı kalın yapar. */
+  text-transform: uppercase; /* Harfleri büyük yapar. */
+  border-radius: 5px; /* Köşeleri yuvarlatır. */
+  transition: all 0.3s ease; /* Geçiş efektini ayarlar. */
+  background-color: transparent; /* Başlangıçta şeffaf arka plan. */
+}
+/* Hover efekti */
+.navbar ul li a:hover {
+  background-color: #555555; /* Hover durumunda arka plan rengini koyu gri yapar. */
+  transform: scale(1.05); /* Hoverda büyüme efekti ekler. */
+}
+
+/* Alt menü */
+.navbar ul li ul {
+  display: none; /* Alt menüyü başlangıçta gizler. */
+  position: absolute; /* Alt menüyü konumlandırır. */
+  top: 100%; /* Ana menünün altına yerleştirir. */
+  right: 0; /* Sağ kenara hizalar. */
+  background-color: #444; /* Alt menü arka plan rengini koyu gri yapar. */
+  list-style: none; /* Liste işaretlerini kaldırır. */
+  padding: 5px 0; /* Alt menü etrafında boşluk bırakır. */
+  margin: 0; /* Varsayılan margin'i sıfırlar. */
+  border-radius: 5px; /* Köşeleri yuvarlatır. */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Gölge efekti ekler. */
+}
+/* Alt menü öğeleri */
+.navbar ul li ul li a {
+  padding: 10px; /* Alt menü öğeleri etrafında boşluk bırakır. */
+  display: block; /* Alt menü öğelerini blok olarak gösterir. */
+  color: white; /* Metin rengini beyaz yapar. */
+  width: 200px; /* Alt menü genişliğini 200 piksel yapar. */
+  border-radius: 5px; /* Köşeleri yuvarlatır. */
+}
+/* Alt menü hover */
+.navbar ul li ul li a:hover {
+  background-color: #555; /* Hoverda alt menü öğesinin arka plan rengini koyu gri yapar. */
+}
+
+/* Alt menü görünümü */
+.navbar ul li:hover > ul {
+  display: block; /* Menü öğesi üzerine gelindiğinde alt menüyü gösterir. */
+}
+
+/* Çok katmanlı alt menü */
+.navbar ul li ul li ul {
+  top: 0; /* Üst alt menüyü yukarıda hizalar. */
+  right: 100%; /* Alt menüyü sağ tarafa yerleştirir. */
+}
+
+/* Mobil uyum */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column; /* Mobilde dikey hizalar. */
+    justify-content: flex-start; /* Mobilde sola hizalar. */
+  }
+
+  .navbar ul li {
+    width: 100%; /* Mobilde her öğenin genişliğini %100 yapar. */
+  }
+
+  .navbar ul li ul {
+    position: static; /* Alt menüyü sabit hale getirir. */
+  }
+
+  .navbar ul li ul li ul {
+    position: static; /* Çoklu alt menüyü sabit hale getirir. */
+  }
+}
+
+.parallax {
+  /* Arka plan resmi */
+  background-image: url('/Hizmetler/wallper.jpg'); /* Arka plan resmi olarak belirtilen dosyayı kullanır. */
+  height: 500px; /* Parallax alanının yüksekliğini 500 piksel olarak ayarlar. */
+  background-attachment: fixed; /* Arka planın sabit kalmasını sağlar, sayfa kaydırıldığında arka plan hareket etmez. */
+  background-position: center; /* Arka plan resmini yatay ve dikey olarak ortalar. */
+  background-repeat: no-repeat; /* Arka plan resminin tekrar etmesini engeller. */
+  background-size: cover; /* Arka plan resmini alanı tamamen kaplayacak şekilde ölçeklendirir. */
+  position: relative; /* Diğer öğelerle olan konumunu belirler. */
+}
+
+
+
+
+
+/*Container */
+
+.container {
+  max-width: 1200px; /* Container'ın maksimum genişliğini 1200 piksel yapar. */
+  margin: 0 auto; /* Dikeyde sıfır, yatayda otomatik margin ile ortalar. */
+  padding: 0 20px; /* İçerik etrafında 20 piksel sağ ve sol boşluk bırakır. */
+  position: relative; /* İçerik konumlandırması için gerekli. */
+  z-index: 2; /* Diğer öğelerin üstünde görünmesini sağlar. */
+}
+
+.intro-section {
+  background: linear-gradient(to right, #4a90e2, #50e3c2); /* Yatay olarak mavi ve yeşil tonlarında gradyan arka plan. */
+  padding: 100px 20px; /* Üst ve alt kısımda 100 piksel, sağ ve solda 20 piksel boşluk bırakır. */
+  text-align: center; /* İçeriği ortalar. */
+  position: relative; /* Diğer öğelerle olan konumunu belirler. */
+  overflow: hidden; /* Taşan içeriği gizler. */
+}
+
+.card-container {
+  display: flex; /* Flexbox düzeni kullanır. */
+  justify-content: center; /* Kartları yatayda ortalar. */
+  gap: 30px; /* Kartlar arasındaki boşluğu 30 piksel yapar. */
+  margin-top: 40px; /* Üstten 40 piksel boşluk bırakır. */
+}
+
+.card {
+  width: 90%; /* Kartın genişliğini %90 yapar, mobil cihazlarda daha geniş görünmesini sağlar. */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.team-section {
+  text-align: center; /* Metni ortalar. */
+  padding: 50px 20px; /* Üst ve alt kısımda 50 piksel, sağ ve solda 20 piksel boşluk bırakır. */
+  background-color: #f9f9f9; /* Arka plan rengini açık gri yapar. */
+}
+
+.team-section h2 {
+  font-size: 2.5em; /* Başlık boyutunu 2.5 em olarak ayarlar. */
+  margin-bottom: 30px; /* Başlığın altındaki boşluğu 30 piksel yapar. */
+}
+
+.team-members {
+  display: flex; /* Flexbox düzeni kullanır. */
+  justify-content: center; /* Üyeleri yatayda ortalar. */
+  flex-wrap: wrap; /* Taşma durumunda kartları yeni bir satıra yerleştirir. */
+}
+
+.member {
+  margin: 15px; /* Üye kartları arasında 15 piksel boşluk bırakır. */
+  padding: 20px; /* Üye kartlarının iç kısmında 20 piksel boşluk bırakır. */
+  border-radius: 10px; /* Kartların köşelerini yuvarlatır. */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Kartlara hafif bir gölge efekti ekler. */
+  background-color: #ffffff; /* Üye kartının arka plan rengini beyaz yapar. */
+  width: 200px; /* Üye kartının genişliğini 200 piksel olarak ayarlar. */
+}
+
+.member-image {
+  border-radius: 50%; /* Resmi daire şeklinde yapar. */
+  width: 150px; /* Resmin genişliğini 150 piksel yapar. */
+  height: 150px; /* Resmin yüksekliğini 150 piksel yapar. */
+  object-fit: cover; /* Resmi kapsama; resmin orantısını korur. */
+  margin-bottom: 15px; /* Resmin altındaki boşluğu 15 piksel yapar. */
+}
+
+.member h3 {
+  font-size: 1.5em; /* İsim başlığının boyutunu 1.5 em olarak ayarlar. */
+  margin: 10px 0; /* Üst ve alt kısımda 10 piksel boşluk bırakır. */
+}
+.member p {
+  color: #666; /* Pozisyon yazısının rengini gri yapar. */
+  font-size: 1em; /* Pozisyon yazısının boyutunu 1 em olarak ayarlar. */
+}
+.member {
+  background-color: #ffffff; /* Üye kartının arka plan rengini beyaz yapar. */
+  border-radius: 15px; /* Kartların köşelerini daha fazla yuvarlatır. */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Daha belirgin gölge efekti ekler. */
+  margin: 20px; /* Kartlar arasında 20 piksel boşluk bırakır. */
+  padding: 20px; /* İç boşluk bırakır. */
+  text-align: center; /* Metni ortalar. */
+  transition: transform 0.3s, box-shadow 0.3s; /* Hover durumunda geçiş efektleri ekler. */
+}
+.member:hover {
+  transform: translateY(-5px); /* Hover durumunda kartı yukarı kaydırır. */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Hover durumunda daha belirgin gölge efekti ekler. */
+}
+.member-image {
+  border-radius: 50%; /* Resmi daire şeklinde yapar. */
+  width: 120px; /* Resmin genişliğini 120 piksel yapar. */
+  height: 120px; /* Resmin yüksekliğini 120 piksel yapar. */
+  object-fit: cover; /* Resmi kapsama; resmin orantısını korur. */
+  margin-bottom: 15px; /* Resmin altındaki boşluğu 15 piksel yapar. */
+  border: 3px solid #007BFF; /* Resmin etrafına mavi bir kenarlık ekler. */
+  transition: border-color 0.3s; /* Kenarlık renginin geçişini ayarlar. */
+}
+.member-image:hover {
+  border-color: #0056b3; /* Hover durumunda kenarlık rengini daha koyu mavi yapar. */
+}
+.member h3 {
+  font-size: 1.6em; /* İsim başlığının boyutunu 1.6 em olarak ayarlar. */
+  margin: 10px 0; /* Üst ve alt kısımda 10 piksel boşluk bırakır. */
+  color: #333; /* İsim yazısının rengini koyu gri yapar. */
+}
+.member p {
+  color: #666; /* Pozisyon yazısının rengini gri yapar. */
+  font-size: 1em; /* Pozisyon yazısının boyutunu 1 em olarak ayarlar. */
+  margin: 5px 0; /* Üst ve alt kısımda 5 piksel boşluk bırakır. */
+}
+
+
+
+
+
+/* Hakkında css*/
+.about-section h1 {
+  color: #333; /* Başlığın rengini koyu gri yapar. */
+  text-align: center; /* Başlığı yatayda ortalar. */
+  font-size: 2.5em; /* Başlık boyutunu 2.5 em olarak ayarlar. */
+  margin-bottom: 20px; /* Başlığın altındaki boşluğu 20 piksel yapar. */
+}
+.content-container {
+  display: flex; /* Flexbox düzeni kullanır. */
+  justify-content: flex-start; /* İçerikleri sola yaslar. */
+  flex-wrap: wrap; /* Taşma durumunda içerikleri yeni satıra yerleştirir. */
+}
+.card-container {
+  flex: 1; /* Kartların genişliğini esnek hale getirir. */
+  margin-right: 20px; /* Kartların sağında 20 piksel boşluk bırakır. */
+  max-width: calc(100% - 320px); /* Kartların maksimum genişliğini ayarlar, fotoğraflar için yer bırakır. */
+}
+.image-container {
+  flex: 0 0 300px; /* Fotoğraf alanının genişliğini 300 piksel olarak ayarlar. */
+  max-width: 300px; /* Fotoğraf alanının maksimum genişliğini 300 piksel yapar. */
+}
+.image-container h2 {
+  text-align: center; /* Fotoğraf başlığını ortalar. */
+  margin-bottom: 10px; /* Başlığın altındaki boşluğu 10 piksel yapar. */
+}
+.image {
+  width: 100%; /* Fotoğrafların genişliğini kapsama; tam genişlikte olmasını sağlar. */
+  height: auto; /* Yüksekliği otomatik olarak ayarlar; orantılı kalmasını sağlar. */
+  border-radius: 8px; /* Fotoğrafların köşelerini yuvarlatır. */
+  margin-bottom: 10px; /* Fotoğraflar arasındaki boşluğu 10 piksel yapar. */
+}
+.card {
+  background: #ffffff; /* Kartların arka plan rengini beyaz yapar. */
+  border-radius: 8px; /* Kartların köşelerini yuvarlatır. */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Kartlara hafif bir gölge efekti ekler. */
+  padding: 20px; /* Kartın iç kısmında 20 piksel boşluk bırakır. */
+  margin: 10px 0; /* Kartın üst ve alt kısmında 10 piksel dış boşluk bırakır. */
+  transition: transform 0.3s; /* Hover durumunda geçiş efekti ekler. */
+}
+.card:hover {
+  transform: translateY(-5px); /* Hover durumunda kartı yukarı kaydırır. */
+}
+.card h2 {
+  color: #007BFF; /* Alt başlığın rengini mavi yapar. */
+  font-size: 1.8em; /* Alt başlık boyutunu 1.8 em olarak ayarlar. */
+  margin-bottom: 10px; /* Alt başlığın altındaki boşluğu 10 piksel yapar. */
+}
+.card p, .card ul {
+  color: #666; /* Metin rengini gri yapar. */
+  font-size: 1em; /* Metin boyutunu 1 em olarak ayarlar. */
+}
+.card ul {
+  list-style-type: disc; /* Liste öğeleri için madde işareti kullanır. */
+  margin-left: 20px; /* Listenin sol tarafında 20 piksel boşluk bırakır. */
+}
+.card ul li {
+  margin: 5px 0; /* Liste öğeleri arasında 5 piksel boşluk bırakır. */
+}
+.card strong {
+  color: #000; /* Vurgu yapılan metin rengini siyah yapar. */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact-section {
+  padding: 20px; /* İçerik etrafında 20 piksel boşluk bırakır. */
+  background-color: #f9f9f9; /* Arka plan rengini açık gri yapar. */
+}
+/* Başlık Stilleri */
+.contact-section h1, .contact-section h2 {
+  text-align: center; /* Başlıkları yatayda ortalar. */
+  color: #333; /* Başlık rengini koyu gri yapar. */
+}
+/* Flexbox ile düzenleme */
+.contact-container {
+  display: flex; /* Flexbox düzeni kullanır. */
+  justify-content: space-between; /* İçerikleri arasında eşit boşluk bırakır. */
+  flex-wrap: wrap; /* Taşma durumunda içerikleri yeni satıra yerleştirir. */
+}
+/* Kart Stilleri */
+.card {
+  background: #fff; /* Kartların arka plan rengini beyaz yapar. */
+  border: 1px solid #ddd; /* Kartların etrafında açık gri bir kenar oluşturur. */
+  border-radius: 5px; /* Kartların köşelerini yuvarlatır. */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Kartlara hafif bir gölge efekti ekler. */
+  margin: 10px; /* Kartların etrafında 10 piksel boşluk bırakır. */
+  flex: 1; /* Kartların genişliğini esnek hale getirir. */
+  min-width: 300px; /* Kartların minimum genişliğini 300 piksel olarak ayarlar. */
+  transition: box-shadow 0.3s ease; /* Hover durumunda gölge geçiş efekti ekler. */
+}
+/* İletişim Formu */
+.contact-form {
+  padding: 20px; /* Formun iç kısmında 20 piksel boşluk bırakır. */
+  background: #ffffff; /* Formun arka plan rengini beyaz yapar. */
+  border: 1px solid #ddd; /* Formun etrafında açık gri bir kenar oluşturur. */
+  border-radius: 8px; /* Formun köşelerini yuvarlatır. */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Formun altında hafif bir gölge efekti ekler. */
+  margin: 10px 0; /* Formun üst ve alt kısmında 10 piksel dış boşluk bırakır. */
+}
+.contact-form label {
+  display: block; /* Etiketleri blok düzende gösterir. */
+  margin-bottom: 5px; /* Etiketlerin altındaki boşluğu 5 piksel yapar. */
+  font-weight: bold; /* Etiketleri kalın yapar. */
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%; /* Genişliği tam kapsama; %100 genişlikte olmasını sağlar. */
+  padding: 10px; /* İçeride 10 piksel boşluk bırakır. */
+  margin-bottom: 15px; /* Alanlar arasındaki boşluğu 15 piksel yapar. */
+  border: 1px solid #ccc; /* Gri bir kenar oluşturur. */
+  border-radius: 4px; /* Alanların köşelerini yuvarlatır. */
+}
+.contact-form button {
+  display: block; /* Butonu blok düzende gösterir. */
+  width: 100%; /* Butonun genişliğini %100 yapar. */
+  padding: 10px; /* Butonun iç kısmında 10 piksel boşluk bırakır. */
+  background-color: #007BFF; /* Butonun arka plan rengini mavi yapar. */
+  color: #fff; /* Buton metninin rengini beyaz yapar. */
+  border: none; /* Kenarları yok eder. */
+  border-radius: 4px; /* Butonun köşelerini yuvarlatır. */
+  cursor: pointer; /* İmleci tıklanabilir hale getirir. */
+  font-size: 16px; /* Buton metninin boyutunu 16 piksel yapar. */
+  transition: background-color 0.3s ease; /* Hover durumunda arka plan rengi geçiş efekti ekler. */
+}
+.contact-form button:hover {
+  background-color: #0056b3; /* Hover durumunda butonun rengini daha koyu mavi yapar. */
+}
+/* İletişim Bilgileri */
+.card.contact-details {
+  background: #ffffff; /* Kartın arka plan rengini beyaz yapar. */
+  color: #333; /* Yazı rengini koyu gri yapar. */
+  border: 1px solid #ddd; /* Kartın etrafında açık gri bir kenar oluşturur. */
+  padding: 20px; /* Kartın iç kısmında 20 piksel boşluk bırakır. */
+  border-radius: 8px; /* Kartın köşelerini yuvarlatır. */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Kartın altında hafif bir gölge efekti ekler. */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover durumunda geçiş efektleri ekler. */
+  margin: 10px 0; /* Kartlar arasında 10 piksel boşluk bırakır. */
+}
+.card.contact-details:hover {
+  transform: scale(1.02); /* Hover sırasında kartı hafif büyütür. */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Hover sırasında gölgeyi artırır. */
+}
+.card.contact-details a {
+  color: #007BFF; /* Bağlantının rengini mavi yapar. */
+  text-decoration: none; /* Bağlantının altını çizer. */
+}
+.card.contact-details a:hover {
+  text-decoration: underline; /* Hover sırasında bağlantının altını çizer. */
+}
+.card.contact-details ul {
+  list-style-type: disc; /* Liste öğelerini dairesel madde işareti ile gösterir. */
+  padding-left: 20px; /* Soldan 20 piksel boşluk bırakır. */
+  margin-top: 10px; /* Üstten 10 piksel boşluk bırakır. */
+}
+.card.contact-details strong {
+  color: #333; /* Vurgu yapılan metin rengini koyu gri yapar. */
+  display: inline-block; /* Vurgu metnini blok olarak gösterir. */
+  margin-bottom: 5px; /* Altına 5 piksel boşluk bırakır. */
+}
+/* Harita Stilleri */
+.map-container {
+  text-align: center; /* Harita alanını ortalar. */
+}
+.map-container iframe {
+  width: 100%; /* Harita alanının genişliğini %100 yapar. */
+  height: 450px; /* Harita alanının yüksekliğini 450 piksel yapar. */
+  border: none; /* Kenarları yok eder. */
+  border-radius: 5px; /* Harita alanının köşelerini yuvarlatır. */
+}
+/* Kart Hover Efekti */
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Hover durumunda kartın gölgesini artırır. */
+}
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .contact-form, .card.contact-details, .map-container {
+      padding: 10px; /* Mobilde iç boşlukları azaltır. */
+  }
+  .contact-form button {
+      font-size: 14px; /* Mobilde buton metin boyutunu küçültür. */
+  }
+}
+
+
+
+
+
+
+
+
+
+
